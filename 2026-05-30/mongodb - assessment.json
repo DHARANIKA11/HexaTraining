@@ -1,0 +1,2189 @@
+use food_delivery_assessment_db
+switched to db food_delivery_assessment_db
+db.restaurants.insertMany([
+{
+restaurant_id: 1,
+name: "Spice Hub",
+city: "Hyderabad",
+cuisine: "Indian",
+rating: 4.5,
+avg_order_value: 450,
+delivery_available: true,
+tags: ["biryani", "north indian", "family"],
+contact: {
+phone: "9876543210",
+email: "spicehub@mail.com"
+}
+},
+{
+restaurant_id: 2,
+name: "Pizza Corner",
+city: "Bangalore",
+
+cuisine: "Italian",
+rating: 4.2,
+avg_order_value: 600,
+delivery_available: true,
+tags: ["pizza", "fast food", "cheese"],
+contact: {
+phone: "9876543211",
+email: "pizza@mail.com"
+}
+},
+{
+restaurant_id: 3,
+name: "Green Bowl",
+city: "Chennai",
+cuisine: "Healthy",
+rating: 4.7,
+avg_order_value: 350,
+delivery_available: false,
+tags: ["salad", "vegan", "healthy"],
+contact: {
+phone: null,
+email: "greenbowl@mail.com"
+}
+},
+{
+restaurant_id: 4,
+name: "Burger Street",
+city: "Hyderabad",
+cuisine: "Fast Food",
+rating: 3.9,
+avg_order_value: 300,
+delivery_available: true,
+tags: ["burger", "fries", "fast food"],
+contact: {
+phone: "9876543213",
+email: null
+}
+},
+{
+restaurant_id: 5,
+name: "Royal Tandoor",
+city: "Delhi",
+cuisine: "Indian",
+rating: 4.8,
+
+avg_order_value: 800,
+delivery_available: true,
+tags: ["tandoor", "north indian", "premium"],
+contact: {
+phone: "9876543214",
+email: "royal@mail.com"
+}
+},
+{
+restaurant_id: 6,
+name: "Tea Tales",
+city: "Pune",
+cuisine: "Cafe",
+rating: 4.1,
+avg_order_value: 200,
+delivery_available: false,
+tags: ["tea", "snacks", "cafe"],
+contact: {
+phone: "9876543215",
+email: "tea@mail.com"
+}
+},
+{
+restaurant_id: 7,
+name: "Ocean Grill",
+city: "Mumbai",
+cuisine: "Seafood",
+rating: 4.6,
+avg_order_value: 900,
+delivery_available: true,
+tags: ["fish", "grill", "premium"],
+contact: {
+phone: "9876543216",
+email: "ocean@mail.com"
+}
+},
+{
+restaurant_id: 8,
+name: "Dosa Point",
+city: "Chennai",
+cuisine: "South Indian",
+rating: 4.3,
+avg_order_value: 250,
+delivery_available: true,
+
+tags: ["dosa", "idli", "breakfast"],
+contact: {
+phone: null,
+email: null
+}
+}
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a1ab2bf10fec637b4d169f7'),
+    '1': ObjectId('6a1ab2bf10fec637b4d169f8'),
+    '2': ObjectId('6a1ab2bf10fec637b4d169f9'),
+    '3': ObjectId('6a1ab2bf10fec637b4d169fa'),
+    '4': ObjectId('6a1ab2bf10fec637b4d169fb'),
+    '5': ObjectId('6a1ab2bf10fec637b4d169fc'),
+    '6': ObjectId('6a1ab2bf10fec637b4d169fd'),
+    '7': ObjectId('6a1ab2bf10fec637b4d169fe')
+  }
+}
+db.restaurants.find()
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fa'),
+  restaurant_id: 4,
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food',
+  rating: 3.9,
+  avg_order_value: 300,
+  delivery_available: true,
+  tags: [
+    'burger',
+    'fries',
+    'fast food'
+  ],
+  contact: {
+    phone: '9876543213',
+    email: null
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fc'),
+  restaurant_id: 6,
+  name: 'Tea Tales',
+  city: 'Pune',
+  cuisine: 'Cafe',
+  rating: 4.1,
+  avg_order_value: 200,
+  delivery_available: false,
+  tags: [
+    'tea',
+    'snacks',
+    'cafe'
+  ],
+  contact: {
+    phone: '9876543215',
+    email: 'tea@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fe'),
+  restaurant_id: 8,
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian',
+  rating: 4.3,
+  avg_order_value: 250,
+  delivery_available: true,
+  tags: [
+    'dosa',
+    'idli',
+    'breakfast'
+  ],
+  contact: {
+    phone: null,
+    email: null
+  }
+}
+db.restaurants.find(
+  {},
+  { name: 1, city: 1, cuisine: 1, _id: 0 }
+)
+{
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian'
+}
+{
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian'
+}
+{
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy'
+}
+{
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food'
+}
+{
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian'
+}
+{
+  name: 'Tea Tales',
+  city: 'Pune',
+  cuisine: 'Cafe'
+}
+{
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood'
+}
+{
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian'
+}
+db.restaurants.find({ city: "Hyderabad" })
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fa'),
+  restaurant_id: 4,
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food',
+  rating: 3.9,
+  avg_order_value: 300,
+  delivery_available: true,
+  tags: [
+    'burger',
+    'fries',
+    'fast food'
+  ],
+  contact: {
+    phone: '9876543213',
+    email: null
+  }
+}
+db.restaurants.find({ cuisine: "Indian" })
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+db.restaurants.find({ delivery: true })
+6. Find restaurants with rating greater than 4.5.
+SyntaxError: Missing semicolon. (1:2)
+
+> 1 | 6. Find restaurants with rating greater than 4.5.
+    |   ^
+6. Find restaurants with rating greater than 4.5
+SyntaxError: Missing semicolon. (1:2)
+
+> 1 | 6. Find restaurants with rating greater than 4.5
+    |   ^
+db.restaurants.find({ rating: { $gt: 4.5 } })
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+db.restaurants.find({ average_order_value: { $lt: 400 } })
+db.restaurants.find({
+  rating: { $gte: 4.0, $lte: 4.7 }
+})
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fc'),
+  restaurant_id: 6,
+  name: 'Tea Tales',
+  city: 'Pune',
+  cuisine: 'Cafe',
+  rating: 4.1,
+  avg_order_value: 200,
+  delivery_available: false,
+  tags: [
+    'tea',
+    'snacks',
+    'cafe'
+  ],
+  contact: {
+    phone: '9876543215',
+    email: 'tea@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fe'),
+  restaurant_id: 8,
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian',
+  rating: 4.3,
+  avg_order_value: 250,
+  delivery_available: true,
+  tags: [
+    'dosa',
+    'idli',
+    'breakfast'
+  ],
+  contact: {
+    phone: null,
+    email: null
+  }
+}
+db.restaurants.find({ average_order_value: { $gte: 600 } })
+db.restaurants.find({
+  city: "Hyderabad",
+  delivery: true
+})
+db.restaurants.find({
+  $or: [
+    { city: "Chennai" },
+    { cuisine: "Indian" }
+  ]
+})
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fe'),
+  restaurant_id: 8,
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian',
+  rating: 4.3,
+  avg_order_value: 250,
+  delivery_available: true,
+  tags: [
+    'dosa',
+    'idli',
+    'breakfast'
+  ],
+  contact: {
+    phone: null,
+    email: null
+  }
+}
+db.restaurants.find({ delivery: false })
+db.restaurants.find({
+  city: { $in: ["Hyderabad", "Delhi", "Mumbai"] }
+})
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fa'),
+  restaurant_id: 4,
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food',
+  rating: 3.9,
+  avg_order_value: 300,
+  delivery_available: true,
+  tags: [
+    'burger',
+    'fries',
+    'fast food'
+  ],
+  contact: {
+    phone: '9876543213',
+    email: null
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+db.restaurants.find({
+  cuisine: { $in: ["Indian", "Italian", "Cafe"] }
+})
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fc'),
+  restaurant_id: 6,
+  name: 'Tea Tales',
+  city: 'Pune',
+  cuisine: 'Cafe',
+  rating: 4.1,
+  avg_order_value: 200,
+  delivery_available: false,
+  tags: [
+    'tea',
+    'snacks',
+    'cafe'
+  ],
+  contact: {
+    phone: '9876543215',
+    email: 'tea@mail.com'
+  }
+}
+db.restaurants.find({
+  city: { $nin: ["Hyderabad", "Bangalore"] }
+})
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fc'),
+  restaurant_id: 6,
+  name: 'Tea Tales',
+  city: 'Pune',
+  cuisine: 'Cafe',
+  rating: 4.1,
+  avg_order_value: 200,
+  delivery_available: false,
+  tags: [
+    'tea',
+    'snacks',
+    'cafe'
+  ],
+  contact: {
+    phone: '9876543215',
+    email: 'tea@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fe'),
+  restaurant_id: 8,
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian',
+  rating: 4.3,
+  avg_order_value: 250,
+  delivery_available: true,
+  tags: [
+    'dosa',
+    'idli',
+    'breakfast'
+  ],
+  contact: {
+    phone: null,
+    email: null
+  }
+}
+db.restaurants.find({
+  name: { $regex: "^P" }
+})
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+db.restaurants.find({
+  name: { $regex: "Point" }
+})
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fe'),
+  restaurant_id: 8,
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian',
+  rating: 4.3,
+  avg_order_value: 250,
+  delivery_available: true,
+  tags: [
+    'dosa',
+    'idli',
+    'breakfast'
+  ],
+  contact: {
+    phone: null,
+    email: null
+  }
+}
+db.restaurants.find({
+  cuisine: { $regex: "Food" }
+})
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fa'),
+  restaurant_id: 4,
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food',
+  rating: 3.9,
+  avg_order_value: 300,
+  delivery_available: true,
+  tags: [
+    'burger',
+    'fries',
+    'fast food'
+  ],
+  contact: {
+    phone: '9876543213',
+    email: null
+  }
+}
+db.restaurants.find({ phone: null })
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fa'),
+  restaurant_id: 4,
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food',
+  rating: 3.9,
+  avg_order_value: 300,
+  delivery_available: true,
+  tags: [
+    'burger',
+    'fries',
+    'fast food'
+  ],
+  contact: {
+    phone: '9876543213',
+    email: null
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fc'),
+  restaurant_id: 6,
+  name: 'Tea Tales',
+  city: 'Pune',
+  cuisine: 'Cafe',
+  rating: 4.1,
+  avg_order_value: 200,
+  delivery_available: false,
+  tags: [
+    'tea',
+    'snacks',
+    'cafe'
+  ],
+  contact: {
+    phone: '9876543215',
+    email: 'tea@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fe'),
+  restaurant_id: 8,
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian',
+  rating: 4.3,
+  avg_order_value: 250,
+  delivery_available: true,
+  tags: [
+    'dosa',
+    'idli',
+    'breakfast'
+  ],
+  contact: {
+    phone: null,
+    email: null
+  }
+}
+db.restaurants.find({ email: null })
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fa'),
+  restaurant_id: 4,
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food',
+  rating: 3.9,
+  avg_order_value: 300,
+  delivery_available: true,
+  tags: [
+    'burger',
+    'fries',
+    'fast food'
+  ],
+  contact: {
+    phone: '9876543213',
+    email: null
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fc'),
+  restaurant_id: 6,
+  name: 'Tea Tales',
+  city: 'Pune',
+  cuisine: 'Cafe',
+  rating: 4.1,
+  avg_order_value: 200,
+  delivery_available: false,
+  tags: [
+    'tea',
+    'snacks',
+    'cafe'
+  ],
+  contact: {
+    phone: '9876543215',
+    email: 'tea@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fe'),
+  restaurant_id: 8,
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian',
+  rating: 4.3,
+  avg_order_value: 250,
+  delivery_available: true,
+  tags: [
+    'dosa',
+    'idli',
+    'breakfast'
+  ],
+  contact: {
+    phone: null,
+    email: null
+  }
+}
+db.restaurants.find({
+  $or: [
+    { phone: null },
+    { email: null }
+  ]
+})
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fa'),
+  restaurant_id: 4,
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food',
+  rating: 3.9,
+  avg_order_value: 300,
+  delivery_available: true,
+  tags: [
+    'burger',
+    'fries',
+    'fast food'
+  ],
+  contact: {
+    phone: '9876543213',
+    email: null
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fc'),
+  restaurant_id: 6,
+  name: 'Tea Tales',
+  city: 'Pune',
+  cuisine: 'Cafe',
+  rating: 4.1,
+  avg_order_value: 200,
+  delivery_available: false,
+  tags: [
+    'tea',
+    'snacks',
+    'cafe'
+  ],
+  contact: {
+    phone: '9876543215',
+    email: 'tea@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fe'),
+  restaurant_id: 8,
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian',
+  rating: 4.3,
+  avg_order_value: 250,
+  delivery_available: true,
+  tags: [
+    'dosa',
+    'idli',
+    'breakfast'
+  ],
+  contact: {
+    phone: null,
+    email: null
+  }
+}
+db.restaurants.find({ tags: "premium" })
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+db.restaurants.find({ tags: "fast food" })
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fa'),
+  restaurant_id: 4,
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food',
+  rating: 3.9,
+  avg_order_value: 300,
+  delivery_available: true,
+  tags: [
+    'burger',
+    'fries',
+    'fast food'
+  ],
+  contact: {
+    phone: '9876543213',
+    email: null
+  }
+}
+db.restaurants.find({
+  tags: { $all: ["north indian", "premium"] }
+})
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+db.restaurants.find().sort({ rating: -1 })
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fe'),
+  restaurant_id: 8,
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian',
+  rating: 4.3,
+  avg_order_value: 250,
+  delivery_available: true,
+  tags: [
+    'dosa',
+    'idli',
+    'breakfast'
+  ],
+  contact: {
+    phone: null,
+    email: null
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fc'),
+  restaurant_id: 6,
+  name: 'Tea Tales',
+  city: 'Pune',
+  cuisine: 'Cafe',
+  rating: 4.1,
+  avg_order_value: 200,
+  delivery_available: false,
+  tags: [
+    'tea',
+    'snacks',
+    'cafe'
+  ],
+  contact: {
+    phone: '9876543215',
+    email: 'tea@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fa'),
+  restaurant_id: 4,
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food',
+  rating: 3.9,
+  avg_order_value: 300,
+  delivery_available: true,
+  tags: [
+    'burger',
+    'fries',
+    'fast food'
+  ],
+  contact: {
+    phone: '9876543213',
+    email: null
+  }
+}
+db.restaurants.find().sort({ rating: -1 }).limit(3)
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+db.restaurants.find().sort({ average_order_value: 1 })
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f9'),
+  restaurant_id: 3,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7,
+  avg_order_value: 350,
+  delivery_available: false,
+  tags: [
+    'salad',
+    'vegan',
+    'healthy'
+  ],
+  contact: {
+    phone: null,
+    email: 'greenbowl@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fa'),
+  restaurant_id: 4,
+  name: 'Burger Street',
+  city: 'Hyderabad',
+  cuisine: 'Fast Food',
+  rating: 3.9,
+  avg_order_value: 300,
+  delivery_available: true,
+  tags: [
+    'burger',
+    'fries',
+    'fast food'
+  ],
+  contact: {
+    phone: '9876543213',
+    email: null
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fb'),
+  restaurant_id: 5,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8,
+  avg_order_value: 800,
+  delivery_available: true,
+  tags: [
+    'tandoor',
+    'north indian',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543214',
+    email: 'royal@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fc'),
+  restaurant_id: 6,
+  name: 'Tea Tales',
+  city: 'Pune',
+  cuisine: 'Cafe',
+  rating: 4.1,
+  avg_order_value: 200,
+  delivery_available: false,
+  tags: [
+    'tea',
+    'snacks',
+    'cafe'
+  ],
+  contact: {
+    phone: '9876543215',
+    email: 'tea@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fd'),
+  restaurant_id: 7,
+  name: 'Ocean Grill',
+  city: 'Mumbai',
+  cuisine: 'Seafood',
+  rating: 4.6,
+  avg_order_value: 900,
+  delivery_available: true,
+  tags: [
+    'fish',
+    'grill',
+    'premium'
+  ],
+  contact: {
+    phone: '9876543216',
+    email: 'ocean@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169fe'),
+  restaurant_id: 8,
+  name: 'Dosa Point',
+  city: 'Chennai',
+  cuisine: 'South Indian',
+  rating: 4.3,
+  avg_order_value: 250,
+  delivery_available: true,
+  tags: [
+    'dosa',
+    'idli',
+    'breakfast'
+  ],
+  contact: {
+    phone: null,
+    email: null
+  }
+}
+db.restaurants.find().sort({ average_order_value: -1 }).limit(2)
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f7'),
+  restaurant_id: 1,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5,
+  avg_order_value: 450,
+  delivery_available: true,
+  tags: [
+    'biryani',
+    'north indian',
+    'family'
+  ],
+  contact: {
+    phone: '9876543210',
+    email: 'spicehub@mail.com'
+  }
+}
+{
+  _id: ObjectId('6a1ab2bf10fec637b4d169f8'),
+  restaurant_id: 2,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2,
+  avg_order_value: 600,
+  delivery_available: true,
+  tags: [
+    'pizza',
+    'fast food',
+    'cheese'
+  ],
+  contact: {
+    phone: '9876543211',
+    email: 'pizza@mail.com'
+  }
+}
+db.restaurants.updateOne(
+  { name: "Burger Street" },
+  { $set: { rating: 4.0 } }
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.restaurants.updateOne(
+  { name: "Tea Tales" },
+  { $set: { delivery: true } }
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.restaurants.updateMany(
+  {},
+  { $set: { active: true } }
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 8,
+  modifiedCount: 8,
+  upsertedCount: 0
+}
+db.restaurants.updateOne(
+  { name: "Spice Hub" },
+  { $push: { tags: "popular" } }
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.restaurants.updateMany(
+  {},
+  { $unset: { active: "" } }
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 8,
+  modifiedCount: 8,
+  upsertedCount: 0
+}
+db.restaurants.deleteOne({ restaurant_id: 6 })
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.restaurants.deleteMany({ rating: { $lt: 4.0 } })
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+db.restaurants.countDocuments()
+7
+db.restaurants.countDocuments({ delivery: true })
+0
+db.restaurants.distinct("city")
+[ 'Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Mumbai' ]
+db.restaurants.distinct("cuisine")
+[
+  'Fast Food',
+  'Healthy',
+  'Indian',
+  'Italian',
+  'Seafood',
+  'South Indian'
+]
+db.restaurants.aggregate([
+  { $group: { _id: "$city", total: { $sum: 1 } } }
+])
+{
+  _id: 'Mumbai',
+  total: 1
+}
+{
+  _id: 'Chennai',
+  total: 2
+}
+{
+  _id: 'Hyderabad',
+  total: 2
+}
+{
+  _id: 'Bangalore',
+  total: 1
+}
+{
+  _id: 'Delhi',
+  total: 1
+}
+db.restaurants.aggregate([
+  { $group: { _id: "$cuisine", total: { $sum: 1 } } }
+])
+{
+  _id: 'Seafood',
+  total: 1
+}
+{
+  _id: 'Healthy',
+  total: 1
+}
+{
+  _id: 'Indian',
+  total: 2
+}
+{
+  _id: 'Italian',
+  total: 1
+}
+{
+  _id: 'South Indian',
+  total: 1
+}
+{
+  _id: 'Fast Food',
+  total: 1
+}
+db.restaurants.aggregate([
+  { $group: { _id: "$cuisine", avgRating: { $avg: "$rating" } } }
+])
+{
+  _id: 'Fast Food',
+  avgRating: 4
+}
+{
+  _id: 'Healthy',
+  avgRating: 4.7
+}
+{
+  _id: 'Indian',
+  avgRating: 4.65
+}
+{
+  _id: 'Italian',
+  avgRating: 4.2
+}
+{
+  _id: 'South Indian',
+  avgRating: 4.3
+}
+{
+  _id: 'Seafood',
+  avgRating: 4.6
+}
+db.restaurants.aggregate([
+  { $group: { _id: "$city", avgOrderValue: { $avg: "$average_order_value" } } }
+])
+{
+  _id: 'Mumbai',
+  avgOrderValue: null
+}
+{
+  _id: 'Chennai',
+  avgOrderValue: null
+}
+{
+  _id: 'Hyderabad',
+  avgOrderValue: null
+}
+{
+  _id: 'Bangalore',
+  avgOrderValue: null
+}
+{
+  _id: 'Delhi',
+  avgOrderValue: null
+}
+db.restaurants.aggregate([
+  { $group: { _id: "$cuisine", maxOrderValue: { $max: "$average_order_value" } } }
+])
+{
+  _id: 'Fast Food',
+  maxOrderValue: null
+}
+{
+  _id: 'Healthy',
+  maxOrderValue: null
+}
+{
+  _id: 'Indian',
+  maxOrderValue: null
+}
+{
+  _id: 'Italian',
+  maxOrderValue: null
+}
+{
+  _id: 'South Indian',
+  maxOrderValue: null
+}
+{
+  _id: 'Seafood',
+  maxOrderValue: null
+}
+db.restaurants.aggregate([
+  { $group: { _id: "$cuisine", count: { $sum: 1 } } },
+  { $match: { count: { $gt: 1 } } }
+])
+{
+  _id: 'Indian',
+  count: 2
+}
+food_delivery_assessment_db
+
+
