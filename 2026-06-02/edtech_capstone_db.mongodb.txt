@@ -1,0 +1,2518 @@
+use edtech_capstone_db
+switched to db edtech_capstone_db
+db.learners.insertMany([
+{
+learner_id: 1,
+name: "Rahul Sharma",
+city: "Hyderabad",
+experience_years: 2,
+goal: "Data Engineer",
+phone: "9876543210"
+},
+{
+learner_id: 2,
+name: "Priya Reddy",
+city: "Bangalore",
+experience_years: 4,
+goal: "AI Engineer",
+phone: "9876543211"
+},
+{
+learner_id: 3,
+name: "Amit Kumar",
+city: "Mumbai",
+experience_years: 1,
+goal: "Data Analyst",
+phone: null
+},
+{
+learner_id: 4,
+name: "Sneha Patel",
+city: "Chennai",
+experience_years: 6,
+goal: "ML Engineer",
+phone: "9876543213"
+},
+{
+learner_id: 5,
+name: "Farhan Ali",
+
+city: "Delhi",
+experience_years: 3,
+goal: "Cloud Engineer",
+phone: "9876543214"
+},
+{
+learner_id: 6,
+name: "Meera Nair",
+city: "Pune",
+experience_years: 0,
+goal: "AI Engineer",
+phone: null
+}
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a1e6c71867d6c0135836b86'),
+    '1': ObjectId('6a1e6c71867d6c0135836b87'),
+    '2': ObjectId('6a1e6c71867d6c0135836b88'),
+    '3': ObjectId('6a1e6c71867d6c0135836b89'),
+    '4': ObjectId('6a1e6c71867d6c0135836b8a'),
+    '5': ObjectId('6a1e6c71867d6c0135836b8b')
+  }
+}
+db.learners.insertMany([
+{
+learner_id: 1,
+name: "Rahul Sharma",
+city: "Hyderabad",
+experience_years: 2,
+goal: "Data Engineer",
+phone: "9876543210"
+},
+{
+learner_id: 2,
+name: "Priya Reddy",
+city: "Bangalore",
+experience_years: 4,
+goal: "AI Engineer",
+phone: "9876543211"
+},
+{
+learner_id: 3,
+name: "Amit Kumar",
+city: "Mumbai",
+experience_years: 1,
+goal: "Data Analyst",
+phone: null
+},
+{
+learner_id: 4,
+name: "Sneha Patel",
+city: "Chennai",
+experience_years: 6,
+goal: "ML Engineer",
+phone: "9876543213"
+},
+{
+learner_id: 5,
+name: "Farhan Ali",
+
+city: "Delhi",
+experience_years: 3,
+goal: "Cloud Engineer",
+phone: "9876543214"
+},
+{
+learner_id: 6,
+name: "Meera Nair",
+city: "Pune",
+experience_years: 0,
+goal: "AI Engineer",
+phone: null
+}
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a1e6c98867d6c0135836b8c'),
+    '1': ObjectId('6a1e6c98867d6c0135836b8d'),
+    '2': ObjectId('6a1e6c98867d6c0135836b8e'),
+    '3': ObjectId('6a1e6c98867d6c0135836b8f'),
+    '4': ObjectId('6a1e6c98867d6c0135836b90'),
+    '5': ObjectId('6a1e6c98867d6c0135836b91')
+  }
+}
+db.instructors.insertMany([
+{
+instructor_id: 101,
+instructor_name: "Abdullah Khan",
+expertise: ["AI", "Data Engineering", "Cloud"],
+rating: 4.9
+},
+{
+instructor_id: 102,
+instructor_name: "Neha Singh",
+expertise: ["Power BI", "SQL", "Analytics"],
+rating: 4.6
+},
+{
+instructor_id: 103,
+instructor_name: "Ravi Kumar",
+expertise: ["Python", "Machine Learning"],
+rating: 4.7
+}
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a1e6ccd867d6c0135836b92'),
+    '1': ObjectId('6a1e6ccd867d6c0135836b93'),
+    '2': ObjectId('6a1e6ccd867d6c0135836b94')
+  }
+}
+db.courses.insertMany([
+{
+course_id: 201,
+course_name: "Data Engineering with Azure",
+category: "Data Engineering",
+instructor_id: 101,
+price: 15000,
+level: "Intermediate",
+tools: ["SQL", "Python", "Azure Data Factory", "Databricks"]
+},
+{
+course_id: 202,
+course_name: "AI Engineer Roadmap",
+category: "Artificial Intelligence",
+instructor_id: 101,
+price: 20000,
+level: "Beginner",
+tools: ["Python", "OpenAI", "Vector DB", "LangChain"]
+},
+{
+course_id: 203,
+course_name: "Power BI for Business",
+category: "Analytics",
+instructor_id: 102,
+price: 8000,
+level: "Beginner",
+tools: ["Power BI", "Excel", "SQL"]
+},
+{
+course_id: 204,
+course_name: "Machine Learning Practical",
+category: "Machine Learning",
+instructor_id: 103,
+price: 12000,
+level: "Intermediate",
+tools: ["Python", "Scikit-learn", "Pandas"]
+},
+{
+course_id: 205,
+course_name: "Cloud AI Engineer",
+
+category: "Cloud",
+instructor_id: 101,
+price: 18000,
+level: "Advanced",
+tools: ["Azure", "AWS", "GCP", "AI Services"]
+}
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a1e6ce6867d6c0135836b95'),
+    '1': ObjectId('6a1e6ce6867d6c0135836b96'),
+    '2': ObjectId('6a1e6ce6867d6c0135836b97'),
+    '3': ObjectId('6a1e6ce6867d6c0135836b98'),
+    '4': ObjectId('6a1e6ce6867d6c0135836b99')
+  }
+}
+db.enrollments.insertMany([
+{
+enrollment_id: 1001,
+learner_id: 1,
+course_id: 201,
+enrollment_date: ISODate("2026-01-10"),
+payment: {
+amount: 15000,
+mode: "UPI",
+status: "Success"
+},
+progress: {
+completed_modules: 8,
+total_modules: 10,
+completion_percent: 80
+},
+quiz_scores: [75, 82, 88],
+status: "Active"
+},
+{
+enrollment_id: 1002,
+learner_id: 2,
+course_id: 202,
+enrollment_date: ISODate("2026-01-15"),
+payment: {
+amount: 20000,
+mode: "Card",
+status: "Success"
+},
+progress: {
+completed_modules: 10,
+
+total_modules: 10,
+completion_percent: 100
+},
+quiz_scores: [90, 92, 95],
+status: "Completed"
+},
+{
+enrollment_id: 1003,
+learner_id: 3,
+course_id: 203,
+enrollment_date: ISODate("2026-02-01"),
+payment: {
+amount: 8000,
+mode: "Cash",
+status: "Pending"
+},
+progress: {
+completed_modules: 3,
+total_modules: 8,
+completion_percent: 37.5
+},
+quiz_scores: [60, 65],
+status: "Active"
+},
+{
+enrollment_id: 1004,
+learner_id: 4,
+course_id: 204,
+enrollment_date: ISODate("2026-02-10"),
+payment: {
+amount: 12000,
+mode: "UPI",
+status: "Success"
+},
+progress: {
+completed_modules: 6,
+total_modules: 12,
+completion_percent: 50
+},
+quiz_scores: [78, 80, 85],
+status: "Active"
+},
+{
+enrollment_id: 1005,
+
+learner_id: 5,
+course_id: 205,
+enrollment_date: ISODate("2026-03-05"),
+payment: {
+amount: 18000,
+mode: "Card",
+status: "Failed"
+},
+progress: {
+completed_modules: 0,
+total_modules: 12,
+completion_percent: 0
+},
+quiz_scores: [],
+status: "Payment Failed"
+},
+{
+enrollment_id: 1006,
+learner_id: 6,
+course_id: 202,
+enrollment_date: ISODate("2026-03-12"),
+payment: {
+amount: 20000,
+mode: "UPI",
+status: "Success"
+},
+progress: {
+completed_modules: 2,
+total_modules: 10,
+completion_percent: 20
+},
+quiz_scores: [55],
+status: "Active"
+}
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a1e6cfa867d6c0135836b9a'),
+    '1': ObjectId('6a1e6cfa867d6c0135836b9b'),
+    '2': ObjectId('6a1e6cfa867d6c0135836b9c'),
+    '3': ObjectId('6a1e6cfa867d6c0135836b9d'),
+    '4': ObjectId('6a1e6cfa867d6c0135836b9e'),
+    '5': ObjectId('6a1e6cfa867d6c0135836b9f')
+  }
+}
+db.learners.find()
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b86'),
+  learner_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  experience_years: 2,
+  goal: 'Data Engineer',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b87'),
+  learner_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  experience_years: 4,
+  goal: 'AI Engineer',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b88'),
+  learner_id: 3,
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  experience_years: 1,
+  goal: 'Data Analyst',
+  phone: null
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b89'),
+  learner_id: 4,
+  name: 'Sneha Patel',
+  city: 'Chennai',
+  experience_years: 6,
+  goal: 'ML Engineer',
+  phone: '9876543213'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b8a'),
+  learner_id: 5,
+  name: 'Farhan Ali',
+  city: 'Delhi',
+  experience_years: 3,
+  goal: 'Cloud Engineer',
+  phone: '9876543214'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b8b'),
+  learner_id: 6,
+  name: 'Meera Nair',
+  city: 'Pune',
+  experience_years: 0,
+  goal: 'AI Engineer',
+  phone: null
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8c'),
+  learner_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  experience_years: 2,
+  goal: 'Data Engineer',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8d'),
+  learner_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  experience_years: 4,
+  goal: 'AI Engineer',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8e'),
+  learner_id: 3,
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  experience_years: 1,
+  goal: 'Data Analyst',
+  phone: null
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8f'),
+  learner_id: 4,
+  name: 'Sneha Patel',
+  city: 'Chennai',
+  experience_years: 6,
+  goal: 'ML Engineer',
+  phone: '9876543213'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b90'),
+  learner_id: 5,
+  name: 'Farhan Ali',
+  city: 'Delhi',
+  experience_years: 3,
+  goal: 'Cloud Engineer',
+  phone: '9876543214'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b91'),
+  learner_id: 6,
+  name: 'Meera Nair',
+  city: 'Pune',
+  experience_years: 0,
+  goal: 'AI Engineer',
+  phone: null
+}
+db.courses.find()
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b97'),
+  course_id: 203,
+  course_name: 'Power BI for Business',
+  category: 'Analytics',
+  instructor_id: 102,
+  price: 8000,
+  level: 'Beginner',
+  tools: [
+    'Power BI',
+    'Excel',
+    'SQL'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b98'),
+  course_id: 204,
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  instructor_id: 103,
+  price: 12000,
+  level: 'Intermediate',
+  tools: [
+    'Python',
+    'Scikit-learn',
+    'Pandas'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b99'),
+  course_id: 205,
+  course_name: 'Cloud AI Engineer',
+  category: 'Cloud',
+  instructor_id: 101,
+  price: 18000,
+  level: 'Advanced',
+  tools: [
+    'Azure',
+    'AWS',
+    'GCP',
+    'AI Services'
+  ]
+}
+db.learners.find(
+    {},
+    {
+        _id: 0,
+        name: 1,
+        city: 1,
+        goal: 1
+    }
+)
+{
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  goal: 'Data Engineer'
+}
+{
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  goal: 'AI Engineer'
+}
+{
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  goal: 'Data Analyst'
+}
+{
+  name: 'Sneha Patel',
+  city: 'Chennai',
+  goal: 'ML Engineer'
+}
+{
+  name: 'Farhan Ali',
+  city: 'Delhi',
+  goal: 'Cloud Engineer'
+}
+{
+  name: 'Meera Nair',
+  city: 'Pune',
+  goal: 'AI Engineer'
+}
+{
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  goal: 'Data Engineer'
+}
+{
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  goal: 'AI Engineer'
+}
+{
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  goal: 'Data Analyst'
+}
+{
+  name: 'Sneha Patel',
+  city: 'Chennai',
+  goal: 'ML Engineer'
+}
+{
+  name: 'Farhan Ali',
+  city: 'Delhi',
+  goal: 'Cloud Engineer'
+}
+{
+  name: 'Meera Nair',
+  city: 'Pune',
+  goal: 'AI Engineer'
+}
+db.learners.find({city : "Hyderabad"})
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b86'),
+  learner_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  experience_years: 2,
+  goal: 'Data Engineer',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8c'),
+  learner_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  experience_years: 2,
+  goal: 'Data Engineer',
+  phone: '9876543210'
+}
+db.learners.find({goal : "AI Engineer"})
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b87'),
+  learner_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  experience_years: 4,
+  goal: 'AI Engineer',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b8b'),
+  learner_id: 6,
+  name: 'Meera Nair',
+  city: 'Pune',
+  experience_years: 0,
+  goal: 'AI Engineer',
+  phone: null
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8d'),
+  learner_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  experience_years: 4,
+  goal: 'AI Engineer',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b91'),
+  learner_id: 6,
+  name: 'Meera Nair',
+  city: 'Pune',
+  experience_years: 0,
+  goal: 'AI Engineer',
+  phone: null
+}
+db.courses.find({category : "Data Engineering"})
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+db.courses.find({price : {$gt : 10000}})
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b98'),
+  course_id: 204,
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  instructor_id: 103,
+  price: 12000,
+  level: 'Intermediate',
+  tools: [
+    'Python',
+    'Scikit-learn',
+    'Pandas'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b99'),
+  course_id: 205,
+  course_name: 'Cloud AI Engineer',
+  category: 'Cloud',
+  instructor_id: 101,
+  price: 18000,
+  level: 'Advanced',
+  tools: [
+    'Azure',
+    'AWS',
+    'GCP',
+    'AI Services'
+  ]
+}
+db.courses.find({level : "Beginner"})
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b97'),
+  course_id: 203,
+  course_name: 'Power BI for Business',
+  category: 'Analytics',
+  instructor_id: 102,
+  price: 8000,
+  level: 'Beginner',
+  tools: [
+    'Power BI',
+    'Excel',
+    'SQL'
+  ]
+}
+db.enrollments.find({payment_status : "Success"})
+db.enrollments.find({"payment.status" : "Success"})
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9a'),
+  enrollment_id: 1001,
+  learner_id: 1,
+  course_id: 201,
+  enrollment_date: 2026-01-10T00:00:00.000Z,
+  payment: {
+    amount: 15000,
+    mode: 'UPI',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 8,
+    total_modules: 10,
+    completion_percent: 80
+  },
+  quiz_scores: [
+    75,
+    82,
+    88
+  ],
+  status: 'Active'
+}
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9b'),
+  enrollment_id: 1002,
+  learner_id: 2,
+  course_id: 202,
+  enrollment_date: 2026-01-15T00:00:00.000Z,
+  payment: {
+    amount: 20000,
+    mode: 'Card',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 10,
+    total_modules: 10,
+    completion_percent: 100
+  },
+  quiz_scores: [
+    90,
+    92,
+    95
+  ],
+  status: 'Completed'
+}
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9d'),
+  enrollment_id: 1004,
+  learner_id: 4,
+  course_id: 204,
+  enrollment_date: 2026-02-10T00:00:00.000Z,
+  payment: {
+    amount: 12000,
+    mode: 'UPI',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 6,
+    total_modules: 12,
+    completion_percent: 50
+  },
+  quiz_scores: [
+    78,
+    80,
+    85
+  ],
+  status: 'Active'
+}
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9f'),
+  enrollment_id: 1006,
+  learner_id: 6,
+  course_id: 202,
+  enrollment_date: 2026-03-12T00:00:00.000Z,
+  payment: {
+    amount: 20000,
+    mode: 'UPI',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 2,
+    total_modules: 10,
+    completion_percent: 20
+  },
+  quiz_scores: [
+    55
+  ],
+  status: 'Active'
+}
+db.learners.find({Phone : null})
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b86'),
+  learner_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  experience_years: 2,
+  goal: 'Data Engineer',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b87'),
+  learner_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  experience_years: 4,
+  goal: 'AI Engineer',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b88'),
+  learner_id: 3,
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  experience_years: 1,
+  goal: 'Data Analyst',
+  phone: null
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b89'),
+  learner_id: 4,
+  name: 'Sneha Patel',
+  city: 'Chennai',
+  experience_years: 6,
+  goal: 'ML Engineer',
+  phone: '9876543213'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b8a'),
+  learner_id: 5,
+  name: 'Farhan Ali',
+  city: 'Delhi',
+  experience_years: 3,
+  goal: 'Cloud Engineer',
+  phone: '9876543214'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b8b'),
+  learner_id: 6,
+  name: 'Meera Nair',
+  city: 'Pune',
+  experience_years: 0,
+  goal: 'AI Engineer',
+  phone: null
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8c'),
+  learner_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  experience_years: 2,
+  goal: 'Data Engineer',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8d'),
+  learner_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  experience_years: 4,
+  goal: 'AI Engineer',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8e'),
+  learner_id: 3,
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  experience_years: 1,
+  goal: 'Data Analyst',
+  phone: null
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8f'),
+  learner_id: 4,
+  name: 'Sneha Patel',
+  city: 'Chennai',
+  experience_years: 6,
+  goal: 'ML Engineer',
+  phone: '9876543213'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b90'),
+  learner_id: 5,
+  name: 'Farhan Ali',
+  city: 'Delhi',
+  experience_years: 3,
+  goal: 'Cloud Engineer',
+  phone: '9876543214'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b91'),
+  learner_id: 6,
+  name: 'Meera Nair',
+  city: 'Pune',
+  experience_years: 0,
+  goal: 'AI Engineer',
+  phone: null
+}
+db.learners.find({experience_years : {$gt : 2}})
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b87'),
+  learner_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  experience_years: 4,
+  goal: 'AI Engineer',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b89'),
+  learner_id: 4,
+  name: 'Sneha Patel',
+  city: 'Chennai',
+  experience_years: 6,
+  goal: 'ML Engineer',
+  phone: '9876543213'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b8a'),
+  learner_id: 5,
+  name: 'Farhan Ali',
+  city: 'Delhi',
+  experience_years: 3,
+  goal: 'Cloud Engineer',
+  phone: '9876543214'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8d'),
+  learner_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  experience_years: 4,
+  goal: 'AI Engineer',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8f'),
+  learner_id: 4,
+  name: 'Sneha Patel',
+  city: 'Chennai',
+  experience_years: 6,
+  goal: 'ML Engineer',
+  phone: '9876543213'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b90'),
+  learner_id: 5,
+  name: 'Farhan Ali',
+  city: 'Delhi',
+  experience_years: 3,
+  goal: 'Cloud Engineer',
+  phone: '9876543214'
+}
+db.courses.find({price : {$gt : 8000,$gt : 18000})
+SyntaxError: Unexpected token, expected "," (1:49)
+
+> 1 | db.courses.find({price : {$gt : 8000,$gt : 18000})
+    |                                                  ^
+db.courses.find({price : {$gt : 8000,$gt : 18000}})
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+db.courses.find({level : {$in : ["Beginner", "Intermediate"] }})
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b97'),
+  course_id: 203,
+  course_name: 'Power BI for Business',
+  category: 'Analytics',
+  instructor_id: 102,
+  price: 8000,
+  level: 'Beginner',
+  tools: [
+    'Power BI',
+    'Excel',
+    'SQL'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b98'),
+  course_id: 204,
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  instructor_id: 103,
+  price: 12000,
+  level: 'Intermediate',
+  tools: [
+    'Python',
+    'Scikit-learn',
+    'Pandas'
+  ]
+}
+db.enrollments.find({"progress.completion_percent" : {$gt : 80}})
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9b'),
+  enrollment_id: 1002,
+  learner_id: 2,
+  course_id: 202,
+  enrollment_date: 2026-01-15T00:00:00.000Z,
+  payment: {
+    amount: 20000,
+    mode: 'Card',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 10,
+    total_modules: 10,
+    completion_percent: 100
+  },
+  quiz_scores: [
+    90,
+    92,
+    95
+  ],
+  status: 'Completed'
+}
+db.enrollments.find({"payment.status" : "not success"})
+db.enrollments.find({"payment.status" : {$ne: "not success"}})
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9a'),
+  enrollment_id: 1001,
+  learner_id: 1,
+  course_id: 201,
+  enrollment_date: 2026-01-10T00:00:00.000Z,
+  payment: {
+    amount: 15000,
+    mode: 'UPI',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 8,
+    total_modules: 10,
+    completion_percent: 80
+  },
+  quiz_scores: [
+    75,
+    82,
+    88
+  ],
+  status: 'Active'
+}
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9b'),
+  enrollment_id: 1002,
+  learner_id: 2,
+  course_id: 202,
+  enrollment_date: 2026-01-15T00:00:00.000Z,
+  payment: {
+    amount: 20000,
+    mode: 'Card',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 10,
+    total_modules: 10,
+    completion_percent: 100
+  },
+  quiz_scores: [
+    90,
+    92,
+    95
+  ],
+  status: 'Completed'
+}
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9c'),
+  enrollment_id: 1003,
+  learner_id: 3,
+  course_id: 203,
+  enrollment_date: 2026-02-01T00:00:00.000Z,
+  payment: {
+    amount: 8000,
+    mode: 'Cash',
+    status: 'Pending'
+  },
+  progress: {
+    completed_modules: 3,
+    total_modules: 8,
+    completion_percent: 37.5
+  },
+  quiz_scores: [
+    60,
+    65
+  ],
+  status: 'Active'
+}
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9d'),
+  enrollment_id: 1004,
+  learner_id: 4,
+  course_id: 204,
+  enrollment_date: 2026-02-10T00:00:00.000Z,
+  payment: {
+    amount: 12000,
+    mode: 'UPI',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 6,
+    total_modules: 12,
+    completion_percent: 50
+  },
+  quiz_scores: [
+    78,
+    80,
+    85
+  ],
+  status: 'Active'
+}
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9e'),
+  enrollment_id: 1005,
+  learner_id: 5,
+  course_id: 205,
+  enrollment_date: 2026-03-05T00:00:00.000Z,
+  payment: {
+    amount: 18000,
+    mode: 'Card',
+    status: 'Failed'
+  },
+  progress: {
+    completed_modules: 0,
+    total_modules: 12,
+    completion_percent: 0
+  },
+  quiz_scores: [],
+  status: 'Payment Failed'
+}
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9f'),
+  enrollment_id: 1006,
+  learner_id: 6,
+  course_id: 202,
+  enrollment_date: 2026-03-12T00:00:00.000Z,
+  payment: {
+    amount: 20000,
+    mode: 'UPI',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 2,
+    total_modules: 10,
+    completion_percent: 20
+  },
+  quiz_scores: [
+    55
+  ],
+  status: 'Active'
+}
+db.learners.find({city : {$in : ["Hyderanad, Banglore,Pune"]}})
+db.learners.find({city : {$in : ["Hyderanad, Banglore,Pune"]}})
+db.learners.find(
+    {
+        city: {
+            $in: ["Hyderabad", "Bangalore", "Pune"]
+        }
+    }
+)
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b86'),
+  learner_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  experience_years: 2,
+  goal: 'Data Engineer',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b87'),
+  learner_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  experience_years: 4,
+  goal: 'AI Engineer',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e6c71867d6c0135836b8b'),
+  learner_id: 6,
+  name: 'Meera Nair',
+  city: 'Pune',
+  experience_years: 0,
+  goal: 'AI Engineer',
+  phone: null
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8c'),
+  learner_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  experience_years: 2,
+  goal: 'Data Engineer',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b8d'),
+  learner_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  experience_years: 4,
+  goal: 'AI Engineer',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e6c98867d6c0135836b91'),
+  learner_id: 6,
+  name: 'Meera Nair',
+  city: 'Pune',
+  experience_years: 0,
+  goal: 'AI Engineer',
+  phone: null
+}
+db.courses.find({courses : {$nin : {category : "cloud"}}})
+MongoServerError[BadValue]: $nin needs an array
+db.courses.find({category : $ne :"cloud"})
+SyntaxError: Unexpected token, expected "," (1:32)
+
+> 1 | db.courses.find({category : $ne :"cloud"})
+    |                                 ^
+db.courses.find(
+    {
+        category: {
+            $ne: "Cloud"
+        }
+    }
+)
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b97'),
+  course_id: 203,
+  course_name: 'Power BI for Business',
+  category: 'Analytics',
+  instructor_id: 102,
+  price: 8000,
+  level: 'Beginner',
+  tools: [
+    'Power BI',
+    'Excel',
+    'SQL'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b98'),
+  course_id: 204,
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  instructor_id: 103,
+  price: 12000,
+  level: 'Intermediate',
+  tools: [
+    'Python',
+    'Scikit-learn',
+    'Pandas'
+  ]
+}
+db.instructors.find({expertise : "AI"})
+{
+  _id: ObjectId('6a1e6ccd867d6c0135836b92'),
+  instructor_id: 101,
+  instructor_name: 'Abdullah Khan',
+  expertise: [
+    'AI',
+    'Data Engineering',
+    'Cloud'
+  ],
+  rating: 4.9
+}
+db.instructors.find({expertise : "SQL"})
+{
+  _id: ObjectId('6a1e6ccd867d6c0135836b93'),
+  instructor_id: 102,
+  instructor_name: 'Neha Singh',
+  expertise: [
+    'Power BI',
+    'SQL',
+    'Analytics'
+  ],
+  rating: 4.6
+}
+db.courses.find({tool : "Python"})
+db.courses.find({tool : "python"})
+db.courses.find({tools : "python"})
+db.courses.find(
+    { tools: "Python" }
+)
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b98'),
+  course_id: 204,
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  instructor_id: 103,
+  price: 12000,
+  level: 'Intermediate',
+  tools: [
+    'Python',
+    'Scikit-learn',
+    'Pandas'
+  ]
+}
+db.courses.find(
+    { tools: "Databricks" }
+)
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+db.enrollments.find({quiz_scores : 95})
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9b'),
+  enrollment_id: 1002,
+  learner_id: 2,
+  course_id: 202,
+  enrollment_date: 2026-01-15T00:00:00.000Z,
+  payment: {
+    amount: 20000,
+    mode: 'Card',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 10,
+    total_modules: 10,
+    completion_percent: 100
+  },
+  quiz_scores: [
+    90,
+    92,
+    95
+  ],
+  status: 'Completed'
+}
+db.enrollments.find({quiz_scores : {$gt: 85}})
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9a'),
+  enrollment_id: 1001,
+  learner_id: 1,
+  course_id: 201,
+  enrollment_date: 2026-01-10T00:00:00.000Z,
+  payment: {
+    amount: 15000,
+    mode: 'UPI',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 8,
+    total_modules: 10,
+    completion_percent: 80
+  },
+  quiz_scores: [
+    75,
+    82,
+    88
+  ],
+  status: 'Active'
+}
+{
+  _id: ObjectId('6a1e6cfa867d6c0135836b9b'),
+  enrollment_id: 1002,
+  learner_id: 2,
+  course_id: 202,
+  enrollment_date: 2026-01-15T00:00:00.000Z,
+  payment: {
+    amount: 20000,
+    mode: 'Card',
+    status: 'Success'
+  },
+  progress: {
+    completed_modules: 10,
+    total_modules: 10,
+    completion_percent: 100
+  },
+  quiz_scores: [
+    90,
+    92,
+    95
+  ],
+  status: 'Completed'
+}
+db.courses.find().sort({price : -1})
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b99'),
+  course_id: 205,
+  course_name: 'Cloud AI Engineer',
+  category: 'Cloud',
+  instructor_id: 101,
+  price: 18000,
+  level: 'Advanced',
+  tools: [
+    'Azure',
+    'AWS',
+    'GCP',
+    'AI Services'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b98'),
+  course_id: 204,
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  instructor_id: 103,
+  price: 12000,
+  level: 'Intermediate',
+  tools: [
+    'Python',
+    'Scikit-learn',
+    'Pandas'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b97'),
+  course_id: 203,
+  course_name: 'Power BI for Business',
+  category: 'Analytics',
+  instructor_id: 102,
+  price: 8000,
+  level: 'Beginner',
+  tools: [
+    'Power BI',
+    'Excel',
+    'SQL'
+  ]
+}
+db.courses.find().sort({price : -1}).limit(3)
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b99'),
+  course_id: 205,
+  course_name: 'Cloud AI Engineer',
+  category: 'Cloud',
+  instructor_id: 101,
+  price: 18000,
+  level: 'Advanced',
+  tools: [
+    'Azure',
+    'AWS',
+    'GCP',
+    'AI Services'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+db.courses.find().sort({experience_years : -1})
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b97'),
+  course_id: 203,
+  course_name: 'Power BI for Business',
+  category: 'Analytics',
+  instructor_id: 102,
+  price: 8000,
+  level: 'Beginner',
+  tools: [
+    'Power BI',
+    'Excel',
+    'SQL'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b98'),
+  course_id: 204,
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  instructor_id: 103,
+  price: 12000,
+  level: 'Intermediate',
+  tools: [
+    'Python',
+    'Scikit-learn',
+    'Pandas'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b99'),
+  course_id: 205,
+  course_name: 'Cloud AI Engineer',
+  category: 'Cloud',
+  instructor_id: 101,
+  price: 18000,
+  level: 'Advanced',
+  tools: [
+    'Azure',
+    'AWS',
+    'GCP',
+    'AI Services'
+  ]
+}
+db.courses.find().sort({experience_years : -1}).limit(2)
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b95'),
+  course_id: 201,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_id: 101,
+  price: 15000,
+  level: 'Intermediate',
+  tools: [
+    'SQL',
+    'Python',
+    'Azure Data Factory',
+    'Databricks'
+  ]
+}
+{
+  _id: ObjectId('6a1e6ce6867d6c0135836b96'),
+  course_id: 202,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_id: 101,
+  price: 20000,
+  level: 'Beginner',
+  tools: [
+    'Python',
+    'OpenAI',
+    'Vector DB',
+    'LangChain'
+  ]
+}
+db.instructors.find().sort({rating : -1})
+{
+  _id: ObjectId('6a1e6ccd867d6c0135836b92'),
+  instructor_id: 101,
+  instructor_name: 'Abdullah Khan',
+  expertise: [
+    'AI',
+    'Data Engineering',
+    'Cloud'
+  ],
+  rating: 4.9
+}
+{
+  _id: ObjectId('6a1e6ccd867d6c0135836b94'),
+  instructor_id: 103,
+  instructor_name: 'Ravi Kumar',
+  expertise: [
+    'Python',
+    'Machine Learning'
+  ],
+  rating: 4.7
+}
+{
+  _id: ObjectId('6a1e6ccd867d6c0135836b93'),
+  instructor_id: 102,
+  instructor_name: 'Neha Singh',
+  expertise: [
+    'Power BI',
+    'SQL',
+    'Analytics'
+  ],
+  rating: 4.6
+}
+db.learners.updateOne({learner_id : 1},{ $set : {city  : "Scunderabad"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.courses.updateOne({course_id : 203},{$set : {price : 9000}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.enrollments.updateOne({enrollment_id : 1006},{$set : {"progress.completion_percent" : 30}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.enrollments.updateOne({enrollment_id : 1005},{$set : {status : "Inactive"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.learners.updateMany({},{$set : {active : "True"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 12,
+  modifiedCount: 12,
+  upsertedCount: 0
+}
+db.learners.updateMany({},{$unset : {active : ""}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 12,
+  modifiedCount: 12,
+  upsertedCount: 0
+}
+db.courses.updateOne({course_id : 201},{$push : {tools : "MongoDB"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.enrollments.deleteMany({"payment.status" : "failed"})
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+db.learners.deleteMany({experience_year : 0})
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+db.learners.countDocuments()
+12
+db.courses.countDocuments()
+5
+db.courses.countDocuments()
+5
+db.enrollments.countDocuments(
+    { "payment.status": "Success" }
+)
+4
+db.learners.dit
+edtech_capstone_db.learners.dit
+db.learners.distinct(city)
+ReferenceError: city is not defined
+db.learners.distinct("city")
+[
+  'Bangalore',
+  'Chennai',
+  'Delhi',
+  'Hyderabad',
+  'Mumbai',
+  'Pune',
+  'Scunderabad'
+]
+db.courses.distinct("category")
+[
+  'Analytics',
+  'Artificial Intelligence',
+  'Cloud',
+  'Data Engineering',
+  'Machine Learning'
+]
+db.enrollments.distinct("payment.mode")
+[ 'Card', 'Cash', 'UPI' ]
+db.enrollments.aggregate({id : "$payment.mode",total_revenue {$sum : {"payment.amount"}}})
+SyntaxError: Unexpected token, expected "," (1:61)
+
+> 1 | db.enrollments.aggregate({id : "$payment.mode",total_revenue {$sum : {"payment.amount"}}})
+    |                                                              ^
+db.enrollments.aggregate({id : "$payment.mode",total_revenue {$sum : {"$payment.amount"}}})
+SyntaxError: Unexpected token, expected "," (1:61)
+
+> 1 | db.enrollments.aggregate({id : "$payment.mode",total_revenue {$sum : {"$payment.amount"}}})
+    |                                                              ^
+db.enrollments.aggregate([
+  {
+    $group: {
+      _id: "$payment.mode",
+      total_revenue: { $sum: "$payment.amount" }
+    }
+  }
+])
+{
+  _id: 'Cash',
+  total_revenue: 8000
+}
+{
+  _id: 'UPI',
+  total_revenue: 47000
+}
+{
+  _id: 'Card',
+  total_revenue: 38000
+}
+db.enrollments.aggregate([
+  {
+    $group: {
+      _id: "$course_id",
+      total_revenue: { $sum: "$payment.amount" }
+    }
+  }
+])
+{
+  _id: 204,
+  total_revenue: 12000
+}
+{
+  _id: 203,
+  total_revenue: 8000
+}
+{
+  _id: 201,
+  total_revenue: 15000
+}
+{
+  _id: 202,
+  total_revenue: 40000
+}
+{
+  _id: 205,
+  total_revenue: 18000
+}
+db.learners.aggregate([
+  {
+    $group: {
+      _id: "$goal",
+      total_learners: { $sum: 1 }
+    }
+  }
+])
+{
+  _id: 'Data Analyst',
+  total_learners: 2
+}
+{
+  _id: 'Data Engineer',
+  total_learners: 2
+}
+{
+  _id: 'AI Engineer',
+  total_learners: 4
+}
+{
+  _id: 'Cloud Engineer',
+  total_learners: 2
+}
+{
+  _id: 'ML Engineer',
+  total_learners: 2
+}
+db.courses.aggregate([
+  {
+    $group: {
+      _id: "$category",
+      average_price: { $avg: "$price" }
+    }
+  }
+])
+{
+  _id: 'Analytics',
+  average_price: 9000
+}
+{
+  _id: 'Data Engineering',
+  average_price: 15000
+}
+{
+  _id: 'Artificial Intelligence',
+  average_price: 20000
+}
+{
+  _id: 'Cloud',
+  average_price: 18000
+}
+{
+  _id: 'Machine Learning',
+  average_price: 12000
+}
+db.enrollments.aggregate([
+  {
+    $group: {
+      _id: "$course_id",
+      average_completion: {
+        $avg: "$progress.completion_percent"
+      }
+    }
+  }
+])
+{
+  _id: 202,
+  average_completion: 65
+}
+{
+  _id: 201,
+  average_completion: 80
+}
+{
+  _id: 203,
+  average_completion: 37.5
+}
+{
+  _id: 205,
+  average_completion: 0
+}
+{
+  _id: 204,
+  average_completion: 50
+}
+db.enrollments.aggregate([
+  {
+    $group: {
+      _id: "$status",
+      total_enrollments: { $sum: 1 }
+    }
+  }
+])
+{
+  _id: 'Completed',
+  total_enrollments: 1
+}
+{
+  _id: 'Active',
+  total_enrollments: 4
+}
+{
+  _id: 'Inactive',
+  total_enrollments: 1
+}
+db.enrollments.aggregate([
+  {
+    $group: {
+      _id: "$course_id",
+      total_revenue: { $sum: "$payment.amount" }
+    }
+  },
+  {
+    $match: {
+      total_revenue: { $gt: 15000 }
+    }
+  }
+])
+{
+  _id: 202,
+  total_revenue: 40000
+}
+{
+  _id: 205,
+  total_revenue: 18000
+}
+db.enrollments.aggregate([
+  {
+    $lookup: {
+      from: "learners",
+      localField: "learner_id",
+      foreignField: "learner_id",
+      as: "learner"
+    }
+  },
+  {
+    $unwind: "$learner"
+  },
+  {
+    $project: {
+      _id: 0,
+      enrollment_id: 1,
+      learner_name: "$learner.name",
+      city: "$learner.city",
+      course_id: 1,
+      status: 1
+    }
+  }
+])
+{
+  enrollment_id: 1001,
+  course_id: 201,
+  status: 'Active',
+  learner_name: 'Rahul Sharma',
+  city: 'Scunderabad'
+}
+{
+  enrollment_id: 1001,
+  course_id: 201,
+  status: 'Active',
+  learner_name: 'Rahul Sharma',
+  city: 'Hyderabad'
+}
+{
+  enrollment_id: 1002,
+  course_id: 202,
+  status: 'Completed',
+  learner_name: 'Priya Reddy',
+  city: 'Bangalore'
+}
+{
+  enrollment_id: 1002,
+  course_id: 202,
+  status: 'Completed',
+  learner_name: 'Priya Reddy',
+  city: 'Bangalore'
+}
+{
+  enrollment_id: 1003,
+  course_id: 203,
+  status: 'Active',
+  learner_name: 'Amit Kumar',
+  city: 'Mumbai'
+}
+{
+  enrollment_id: 1003,
+  course_id: 203,
+  status: 'Active',
+  learner_name: 'Amit Kumar',
+  city: 'Mumbai'
+}
+{
+  enrollment_id: 1004,
+  course_id: 204,
+  status: 'Active',
+  learner_name: 'Sneha Patel',
+  city: 'Chennai'
+}
+{
+  enrollment_id: 1004,
+  course_id: 204,
+  status: 'Active',
+  learner_name: 'Sneha Patel',
+  city: 'Chennai'
+}
+{
+  enrollment_id: 1005,
+  course_id: 205,
+  status: 'Inactive',
+  learner_name: 'Farhan Ali',
+  city: 'Delhi'
+}
+{
+  enrollment_id: 1005,
+  course_id: 205,
+  status: 'Inactive',
+  learner_name: 'Farhan Ali',
+  city: 'Delhi'
+}
+{
+  enrollment_id: 1006,
+  course_id: 202,
+  status: 'Active',
+  learner_name: 'Meera Nair',
+  city: 'Pune'
+}
+{
+  enrollment_id: 1006,
+  course_id: 202,
+  status: 'Active',
+  learner_name: 'Meera Nair',
+  city: 'Pune'
+}
+db.enrollments.aggregate([
+  {
+    $lookup: {
+      from: "courses",
+      localField: "course_id",
+      foreignField: "course_id",
+      as: "course"
+    }
+  },
+  {
+    $unwind: "$course"
+  },
+  {
+    $project: {
+      _id: 0,
+      enrollment_id: 1,
+      course_name: "$course.course_name",
+      category: "$course.category",
+      amount: "$payment.amount",
+      payment_status: "$payment.status"
+    }
+  }
+])
+{
+  enrollment_id: 1001,
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  amount: 15000,
+  payment_status: 'Success'
+}
+{
+  enrollment_id: 1002,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  amount: 20000,
+  payment_status: 'Success'
+}
+{
+  enrollment_id: 1003,
+  course_name: 'Power BI for Business',
+  category: 'Analytics',
+  amount: 8000,
+  payment_status: 'Pending'
+}
+{
+  enrollment_id: 1004,
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  amount: 12000,
+  payment_status: 'Success'
+}
+{
+  enrollment_id: 1005,
+  course_name: 'Cloud AI Engineer',
+  category: 'Cloud',
+  amount: 18000,
+  payment_status: 'Failed'
+}
+{
+  enrollment_id: 1006,
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  amount: 20000,
+  payment_status: 'Success'
+}
+db.courses.aggregate([
+  {
+    $lookup: {
+      from: "instructors",
+      localField: "instructor_id",
+      foreignField: "instructor_id",
+      as: "instructor"
+    }
+  },
+  {
+    $unwind: "$instructor"
+  },
+  {
+    $project: {
+      _id: 0,
+      course_name: 1,
+      category: 1,
+      instructor_name: "$instructor.instructor_name",
+      instructor_rating: "$instructor.rating"
+    }
+  }
+])
+{
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_name: 'Abdullah Khan',
+  instructor_rating: 4.9
+}
+{
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_name: 'Abdullah Khan',
+  instructor_rating: 4.9
+}
+{
+  course_name: 'Power BI for Business',
+  category: 'Analytics',
+  instructor_name: 'Neha Singh',
+  instructor_rating: 4.6
+}
+{
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  instructor_name: 'Ravi Kumar',
+  instructor_rating: 4.7
+}
+{
+  course_name: 'Cloud AI Engineer',
+  category: 'Cloud',
+  instructor_name: 'Abdullah Khan',
+  instructor_rating: 4.9
+}
+db.enrollments.aggregate([
+  {
+    $lookup: {
+      from: "learners",
+      localField: "learner_id",
+      foreignField: "learner_id",
+      as: "learner"
+    }
+  },
+  {
+    $unwind: "$learner"
+  },
+  {
+    $lookup: {
+      from: "courses",
+      localField: "course_id",
+      foreignField: "course_id",
+      as: "course"
+    }
+  },
+  {
+    $unwind: "$course"
+  },
+  {
+    $lookup: {
+      from: "instructors",
+      localField: "course.instructor_id",
+      foreignField: "instructor_id",
+      as: "instructor"
+    }
+  },
+  {
+    $unwind: "$instructor"
+  },
+  {
+    $project: {
+      _id: 0,
+      enrollment_id: 1,
+      learner_name: "$learner.name",
+      city: "$learner.city",
+      goal: "$learner.goal",
+      course_name: "$course.course_name",
+      category: "$course.category",
+      instructor_name: "$instructor.instructor_name",
+      payment_amount: "$payment.amount",
+      payment_status: "$payment.status",
+      completion_percent: "$progress.completion_percent",
+      enrollment_status: "$status"
+    }
+  }
+])
+{
+  enrollment_id: 1001,
+  learner_name: 'Rahul Sharma',
+  city: 'Scunderabad',
+  goal: 'Data Engineer',
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_name: 'Abdullah Khan',
+  payment_amount: 15000,
+  payment_status: 'Success',
+  completion_percent: 80,
+  enrollment_status: 'Active'
+}
+{
+  enrollment_id: 1001,
+  learner_name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  goal: 'Data Engineer',
+  course_name: 'Data Engineering with Azure',
+  category: 'Data Engineering',
+  instructor_name: 'Abdullah Khan',
+  payment_amount: 15000,
+  payment_status: 'Success',
+  completion_percent: 80,
+  enrollment_status: 'Active'
+}
+{
+  enrollment_id: 1002,
+  learner_name: 'Priya Reddy',
+  city: 'Bangalore',
+  goal: 'AI Engineer',
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_name: 'Abdullah Khan',
+  payment_amount: 20000,
+  payment_status: 'Success',
+  completion_percent: 100,
+  enrollment_status: 'Completed'
+}
+{
+  enrollment_id: 1002,
+  learner_name: 'Priya Reddy',
+  city: 'Bangalore',
+  goal: 'AI Engineer',
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_name: 'Abdullah Khan',
+  payment_amount: 20000,
+  payment_status: 'Success',
+  completion_percent: 100,
+  enrollment_status: 'Completed'
+}
+{
+  enrollment_id: 1003,
+  learner_name: 'Amit Kumar',
+  city: 'Mumbai',
+  goal: 'Data Analyst',
+  course_name: 'Power BI for Business',
+  category: 'Analytics',
+  instructor_name: 'Neha Singh',
+  payment_amount: 8000,
+  payment_status: 'Pending',
+  completion_percent: 37.5,
+  enrollment_status: 'Active'
+}
+{
+  enrollment_id: 1003,
+  learner_name: 'Amit Kumar',
+  city: 'Mumbai',
+  goal: 'Data Analyst',
+  course_name: 'Power BI for Business',
+  category: 'Analytics',
+  instructor_name: 'Neha Singh',
+  payment_amount: 8000,
+  payment_status: 'Pending',
+  completion_percent: 37.5,
+  enrollment_status: 'Active'
+}
+{
+  enrollment_id: 1004,
+  learner_name: 'Sneha Patel',
+  city: 'Chennai',
+  goal: 'ML Engineer',
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  instructor_name: 'Ravi Kumar',
+  payment_amount: 12000,
+  payment_status: 'Success',
+  completion_percent: 50,
+  enrollment_status: 'Active'
+}
+{
+  enrollment_id: 1004,
+  learner_name: 'Sneha Patel',
+  city: 'Chennai',
+  goal: 'ML Engineer',
+  course_name: 'Machine Learning Practical',
+  category: 'Machine Learning',
+  instructor_name: 'Ravi Kumar',
+  payment_amount: 12000,
+  payment_status: 'Success',
+  completion_percent: 50,
+  enrollment_status: 'Active'
+}
+{
+  enrollment_id: 1005,
+  learner_name: 'Farhan Ali',
+  city: 'Delhi',
+  goal: 'Cloud Engineer',
+  course_name: 'Cloud AI Engineer',
+  category: 'Cloud',
+  instructor_name: 'Abdullah Khan',
+  payment_amount: 18000,
+  payment_status: 'Failed',
+  completion_percent: 0,
+  enrollment_status: 'Inactive'
+}
+{
+  enrollment_id: 1005,
+  learner_name: 'Farhan Ali',
+  city: 'Delhi',
+  goal: 'Cloud Engineer',
+  course_name: 'Cloud AI Engineer',
+  category: 'Cloud',
+  instructor_name: 'Abdullah Khan',
+  payment_amount: 18000,
+  payment_status: 'Failed',
+  completion_percent: 0,
+  enrollment_status: 'Inactive'
+}
+{
+  enrollment_id: 1006,
+  learner_name: 'Meera Nair',
+  city: 'Pune',
+  goal: 'AI Engineer',
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_name: 'Abdullah Khan',
+  payment_amount: 20000,
+  payment_status: 'Success',
+  completion_percent: 30,
+  enrollment_status: 'Active'
+}
+{
+  enrollment_id: 1006,
+  learner_name: 'Meera Nair',
+  city: 'Pune',
+  goal: 'AI Engineer',
+  course_name: 'AI Engineer Roadmap',
+  category: 'Artificial Intelligence',
+  instructor_name: 'Abdullah Khan',
+  payment_amount: 20000,
+  payment_status: 'Success',
+  completion_percent: 30,
+  enrollment_status: 'Active'
+}
+edtech_capstone_db
+Selection deleted
+
+

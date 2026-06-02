@@ -1,0 +1,87 @@
+Report 1: Full Enrollment Report
+
+ Objective
+
+The Full Enrollment Report provides a consolidated view of learner enrollments by combining data from the learners, courses, instructors, and enrollments collections using MongoDB's `$lookup` operation. This report helps track learner progress, payment status, course details, and instructor information in a single view.
+
+ Report Fields
+
+* Enrollment ID
+* Learner Name
+* City
+* Goal
+* Course Name
+* Category
+* Instructor Name
+* Payment Amount
+* Payment Status
+* Completion Percentage
+* Enrollment Status
+
+ MongoDB Query
+
+javascript
+db.enrollments.aggregate([
+  {
+    $lookup: {
+      from: "learners",
+      localField: "learner_id",
+      foreignField: "learner_id",
+      as: "learner"
+    }
+  },
+  { $unwind: "$learner" },
+
+  {
+    $lookup: {
+      from: "courses",
+      localField: "course_id",
+      foreignField: "course_id",
+      as: "course"
+    }
+  },
+  { $unwind: "$course" },
+
+  {
+    $lookup: {
+      from: "instructors",
+      localField: "course.instructor_id",
+      foreignField: "instructor_id",
+      as: "instructor"
+    }
+  },
+  { $unwind: "$instructor" },
+
+  {
+    $project: {
+      _id: 0,
+      enrollment_id: 1,
+      learner_name: "$learner.name",
+      city: "$learner.city",
+      goal: "$learner.goal",
+      course_name: "$course.course_name",
+      category: "$course.category",
+      instructor_name: "$instructor.instructor_name",
+      payment_amount: "$payment.amount",
+      payment_status: "$payment.status",
+      completion_percent: "$progress.completion_percent",
+      enrollment_status: "$status"
+    }
+  }
+])
+
+
+ Sample Output
+
+| Enrollment ID | Learner Name | City      | Goal           | Course Name                 | Category                | Instructor Name | Payment Amount | Payment Status | Completion % | Enrollment Status |
+| ------------- | ------------ | --------- | -------------- | --------------------------- | ----------------------- | --------------- | -------------- | -------------- | ------------ | ----------------- |
+| 1001          | Rahul Sharma | Hyderabad | Data Engineer  | Data Engineering with Azure | Data Engineering        | Abdullah Khan   | 15000          | Success        | 80           | Active            |
+| 1002          | Priya Reddy  | Bangalore | AI Engineer    | AI Engineer Roadmap         | Artificial Intelligence | Abdullah Khan   | 20000          | Success        | 100          | Completed         |
+| 1003          | Amit Kumar   | Mumbai    | Data Analyst   | Power BI for Business       | Analytics               | Neha Singh      | 8000           | Pending        | 37.5         | Active            |
+| 1004          | Sneha Patel  | Chennai   | ML Engineer    | Machine Learning Practical  | Machine Learning        | Ravi Kumar      | 12000          | Success        | 50           | Active            |
+| 1005          | Farhan Ali   | Delhi     | Cloud Engineer | Cloud AI Engineer           | Cloud                   | Abdullah Khan   | 18000          | Failed         | 0            | Payment Failed    |
+| 1006          | Meera Nair   | Pune      | AI Engineer    | AI Engineer Roadmap         | Artificial Intelligence | Abdullah Khan   | 20000          | Success        | 20           | Active            |
+
+ Conclusion
+
+This report provides a complete overview of learner enrollment activities, course participation, instructor assignments, payment information, and learning progress. It is useful for monitoring learner performance, tracking revenue, and evaluating course completion rates across the EdTech platform.
