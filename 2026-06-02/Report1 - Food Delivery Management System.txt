@@ -1,0 +1,75 @@
+Food Delivery Management System
+
+ Assessment Report
+
+1. Project Overview
+
+The Food Delivery Management System is designed to manage customers, restaurants, delivery partners, and food orders for an online food delivery platform. The database enables efficient storage, retrieval, and analysis of order transactions and customer activities.
+
+The project demonstrates the use of MongoDB concepts including:
+
+* Document-Oriented Database Design
+* Collections and Documents
+* Embedded Documents and Arrays
+* CRUD Operations (Insert, Find, Update, Delete)
+* Query Operators
+
+
+ Collections Used
+
+ Customers
+
+Stores customer information such as customer ID, name, city, membership type, and contact details.
+
+ Restaurants
+
+ Report 54: Full Order Report
+
+| Order ID | Customer Name | Restaurant Name | Cuisine   | Partner Name       | Order Amount | Payment Mode | Payment Status | Order Status | Delivery Time | Rating |
+| -------- | ------------- | --------------- | --------- | ------------------ | ------------ | ------------ | -------------- | ------------ | ------------- | ------ |
+| 1001     | Rahul Sharma  | Spice Hub       | Indian    | FastMove Logistics | 680          | UPI          | Success        | Delivered    | 35            | 5      |
+| 1002     | Priya Reddy   | Pizza Corner    | Italian   | QuickShip          | 650          | Card         | Success        | Delivered    | 42            | 4      |
+| 1003     | Amit Kumar    | Burger Street   | Fast Food | SpeedKart          | 480          | Cash         | Pending        | Pending      | NULL          | NULL   |
+| 1004     | Sneha Patel   | Green Bowl      | Healthy   | NULL               | 350          | UPI          | Failed         | Cancelled    | NULL          | NULL   |
+| 1005     | Arjun Verma   | Royal Tandoor   | Indian    | DoorDash India     | 720          | UPI          | Success        | Delivered    | 50            | 5      |
+| 1006     | Rahul Sharma  | Spice Hub       | Indian    | FastMove Logistics | 400          | Card         | Success        | Delivered    | 30            | 4      |
+
+
+Stores restaurant details including restaurant ID, restaurant name, city, cuisine type, and ratings.
+
+ Delivery Partners
+
+Stores delivery partner information such as partner ID, partner name, city, and ratings.
+
+ Orders
+
+Stores complete order details including customer information, restaurant information, ordered items, payment details, delivery status, delivery time, and ratings.
+
+ Project Objectives
+
+* Manage customer and restaurant information efficiently.
+* Track food orders and delivery operations.
+* Analyze revenue generated through different payment modes.
+* Monitor restaurant and delivery partner performance.
+* Generate business reports for decision-making.
+* Perform advanced analytics using aggregation and lookup operations.
+
+ MongoDB Features Demonstrated
+
+* insertMany()
+* find()
+* updateOne()
+* updateMany()
+* deleteMany()
+* sort()
+* limit()
+* distinct()
+* countDocuments()
+* Aggregation Pipeline
+* $match
+* $group
+* $project
+* $lookup
+* $unwind
+
+The project successfully demonstrates the practical implementation of MongoDB for a real-world Food Delivery Management System and provides meaningful business insights through analytical reports.

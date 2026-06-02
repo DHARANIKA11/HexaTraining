@@ -1,0 +1,2012 @@
+use food_delivery_capstone_db
+
+switched to db food_delivery_capstone_db
+
+db["customers"].find()
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1c'),
+  customer_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  membership: 'Gold',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1d'),
+  customer_id: 2,
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  membership: 'Silver',
+  phone: '9876543211'
+}
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1e'),
+  customer_id: 3,
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  membership: 'Gold',
+  phone: null
+}
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1f'),
+  customer_id: 4,
+  name: 'Sneha Patel',
+  city: 'Chennai',
+  membership: 'Bronze',
+  phone: '9876543213'
+}
+{
+  _id: ObjectId('6a1e5bc318a720b002504e20'),
+  customer_id: 5,
+  name: 'Arjun Verma',
+  city: 'Delhi',
+  membership: 'Silver',
+  phone: '9876543214'
+}
+db["restaurants"].find()
+{
+  _id: ObjectId('6a1e5c3218a720b002504e23'),
+  restaurant_id: 101,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e24'),
+  restaurant_id: 102,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e25'),
+  restaurant_id: 103,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e26'),
+  restaurant_id: 104,
+  name: 'Burger Street',
+  city: 'Mumbai',
+  cuisine: 'Fast Food',
+  rating: 3.9
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e27'),
+  restaurant_id: 105,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8
+}
+db.customers.find(
+    {},
+    {
+        _id: 0,
+        name: 1,
+        city: 1,
+        membership: 1
+    }
+)
+{
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  membership: 'Gold'
+}
+{
+  name: 'Priya Reddy',
+  city: 'Bangalore',
+  membership: 'Silver'
+}
+{
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  membership: 'Gold'
+}
+{
+  name: 'Sneha Patel',
+  city: 'Chennai',
+  membership: 'Bronze'
+}
+{
+  name: 'Arjun Verma',
+  city: 'Delhi',
+  membership: 'Silver'
+}
+db.customers.find({ city: "Hyderabad" })
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1c'),
+  customer_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  membership: 'Gold',
+  phone: '9876543210'
+}
+db.customers.find({membership: "gold"})
+db.customers.find({ membership: "Gold" })
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1c'),
+  customer_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  membership: 'Gold',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1e'),
+  customer_id: 3,
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  membership: 'Gold',
+  phone: null
+}
+db.customers.find({rating :{$gt:4.5}})
+db.restaurants.find({ rating: { $gt: 4.5 } })
+{
+  _id: ObjectId('6a1e5c3218a720b002504e25'),
+  restaurant_id: 103,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e27'),
+  restaurant_id: 105,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8
+}
+db.customers.find({membership : "Gold"})
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1c'),
+  customer_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  membership: 'Gold',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1e'),
+  customer_id: 3,
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  membership: 'Gold',
+  phone: null
+}
+db.orders.find({order_amount : {$gt : 500}})
+{
+  _id: ObjectId('6a1e5de118a720b002504e38'),
+  order_id: 1001,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Biryani',
+      quantity: 2,
+      price: 250
+    },
+    {
+      item_name: 'Kebab',
+      quantity: 1,
+      price: 180
+    }
+  ],
+  order_amount: 680,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 35,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e39'),
+  order_id: 1002,
+  customer_id: 2,
+  restaurant_id: 102,
+  partner_id: 202,
+  items: [
+    {
+      item_name: 'Pizza',
+      quantity: 1,
+      price: 500
+    },
+    {
+      item_name: 'Garlic Bread',
+      quantity: 1,
+      price: 150
+    }
+  ],
+  order_amount: 650,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 42,
+  order_rating: 4
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3c'),
+  order_id: 1005,
+  customer_id: 5,
+  restaurant_id: 105,
+  partner_id: 204,
+  items: [
+    {
+      item_name: 'Tandoori Chicken',
+      quantity: 1,
+      price: 600
+    },
+    {
+      item_name: 'Naan',
+      quantity: 2,
+      price: 60
+    }
+  ],
+  order_amount: 720,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 50,
+  order_rating: 5
+}
+db.orders.find({ordered_status : "Delivered"})
+db.orders.find({ order_status: "Delivered" })
+{
+  _id: ObjectId('6a1e5de118a720b002504e38'),
+  order_id: 1001,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Biryani',
+      quantity: 2,
+      price: 250
+    },
+    {
+      item_name: 'Kebab',
+      quantity: 1,
+      price: 180
+    }
+  ],
+  order_amount: 680,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 35,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e39'),
+  order_id: 1002,
+  customer_id: 2,
+  restaurant_id: 102,
+  partner_id: 202,
+  items: [
+    {
+      item_name: 'Pizza',
+      quantity: 1,
+      price: 500
+    },
+    {
+      item_name: 'Garlic Bread',
+      quantity: 1,
+      price: 150
+    }
+  ],
+  order_amount: 650,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 42,
+  order_rating: 4
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3c'),
+  order_id: 1005,
+  customer_id: 5,
+  restaurant_id: 105,
+  partner_id: 204,
+  items: [
+    {
+      item_name: 'Tandoori Chicken',
+      quantity: 1,
+      price: 600
+    },
+    {
+      item_name: 'Naan',
+      quantity: 2,
+      price: 60
+    }
+  ],
+  order_amount: 720,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 50,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3d'),
+  order_id: 1006,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Paneer Curry',
+      quantity: 1,
+      price: 300
+    },
+    {
+      item_name: 'Roti',
+      quantity: 4,
+      price: 25
+    }
+  ],
+  order_amount: 400,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 30,
+  order_rating: 4
+}
+db.orders.find({ order_status: "Cancelled" })
+{
+  _id: ObjectId('6a1e5de118a720b002504e3b'),
+  order_id: 1004,
+  customer_id: 4,
+  restaurant_id: 103,
+  partner_id: null,
+  items: [
+    {
+      item_name: 'Salad Bowl',
+      quantity: 1,
+      price: 350
+    }
+  ],
+  order_amount: 350,
+  payment: {
+    mode: 'UPI',
+    status: 'Failed'
+  },
+  order_status: 'Cancelled',
+  delivery_time_minutes: null,
+  order_rating: null
+}
+db.customers.find({ phone: null })
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1e'),
+  customer_id: 3,
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  membership: 'Gold',
+  phone: null
+}
+db.orders.find({
+    order_amount: {
+        $gte: 400,
+        $lte: 700
+    }
+})
+{
+  _id: ObjectId('6a1e5de118a720b002504e38'),
+  order_id: 1001,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Biryani',
+      quantity: 2,
+      price: 250
+    },
+    {
+      item_name: 'Kebab',
+      quantity: 1,
+      price: 180
+    }
+  ],
+  order_amount: 680,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 35,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e39'),
+  order_id: 1002,
+  customer_id: 2,
+  restaurant_id: 102,
+  partner_id: 202,
+  items: [
+    {
+      item_name: 'Pizza',
+      quantity: 1,
+      price: 500
+    },
+    {
+      item_name: 'Garlic Bread',
+      quantity: 1,
+      price: 150
+    }
+  ],
+  order_amount: 650,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 42,
+  order_rating: 4
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3a'),
+  order_id: 1003,
+  customer_id: 3,
+  restaurant_id: 104,
+  partner_id: 203,
+  items: [
+    {
+      item_name: 'Burger',
+      quantity: 2,
+      price: 180
+    },
+    {
+      item_name: 'Fries',
+      quantity: 1,
+      price: 120
+    }
+  ],
+  order_amount: 480,
+  payment: {
+    mode: 'Cash',
+    status: 'Pending'
+  },
+  order_status: 'Pending',
+  delivery_time_minutes: null,
+  order_rating: null
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3d'),
+  order_id: 1006,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Paneer Curry',
+      quantity: 1,
+      price: 300
+    },
+    {
+      item_name: 'Roti',
+      quantity: 4,
+      price: 25
+    }
+  ],
+  order_amount: 400,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 30,
+  order_rating: 4
+}
+db.customers.find({
+    city: {
+        $in: ["Hyderabad", "Delhi", "Mumbai"]
+    }
+})
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1c'),
+  customer_id: 1,
+  name: 'Rahul Sharma',
+  city: 'Hyderabad',
+  membership: 'Gold',
+  phone: '9876543210'
+}
+{
+  _id: ObjectId('6a1e5bc318a720b002504e1e'),
+  customer_id: 3,
+  name: 'Amit Kumar',
+  city: 'Mumbai',
+  membership: 'Gold',
+  phone: null
+}
+{
+  _id: ObjectId('6a1e5bc318a720b002504e20'),
+  customer_id: 5,
+  name: 'Arjun Verma',
+  city: 'Delhi',
+  membership: 'Silver',
+  phone: '9876543214'
+}
+db.restaurants.find({
+    cuisine: {
+        $in: ["Indian", "Fast Food"]
+    }
+})
+{
+  _id: ObjectId('6a1e5c3218a720b002504e23'),
+  restaurant_id: 101,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e26'),
+  restaurant_id: 104,
+  name: 'Burger Street',
+  city: 'Mumbai',
+  cuisine: 'Fast Food',
+  rating: 3.9
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e27'),
+  restaurant_id: 105,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8
+}
+db.orders.find({payment_status : "not success"})
+db.orders.find({
+    "payment.status": {
+        $ne: "Success"
+    }
+})
+{
+  _id: ObjectId('6a1e5de118a720b002504e3a'),
+  order_id: 1003,
+  customer_id: 3,
+  restaurant_id: 104,
+  partner_id: 203,
+  items: [
+    {
+      item_name: 'Burger',
+      quantity: 2,
+      price: 180
+    },
+    {
+      item_name: 'Fries',
+      quantity: 1,
+      price: 120
+    }
+  ],
+  order_amount: 480,
+  payment: {
+    mode: 'Cash',
+    status: 'Pending'
+  },
+  order_status: 'Pending',
+  delivery_time_minutes: null,
+  order_rating: null
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3b'),
+  order_id: 1004,
+  customer_id: 4,
+  restaurant_id: 103,
+  partner_id: null,
+  items: [
+    {
+      item_name: 'Salad Bowl',
+      quantity: 1,
+      price: 350
+    }
+  ],
+  order_amount: 350,
+  payment: {
+    mode: 'UPI',
+    status: 'Failed'
+  },
+  order_status: 'Cancelled',
+  delivery_time_minutes: null,
+  order_rating: null
+}
+db.orders.find({delivery_time_minutes: null})
+{
+  _id: ObjectId('6a1e5de118a720b002504e3a'),
+  order_id: 1003,
+  customer_id: 3,
+  restaurant_id: 104,
+  partner_id: 203,
+  items: [
+    {
+      item_name: 'Burger',
+      quantity: 2,
+      price: 180
+    },
+    {
+      item_name: 'Fries',
+      quantity: 1,
+      price: 120
+    }
+  ],
+  order_amount: 480,
+  payment: {
+    mode: 'Cash',
+    status: 'Pending'
+  },
+  order_status: 'Pending',
+  delivery_time_minutes: null,
+  order_rating: null
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3b'),
+  order_id: 1004,
+  customer_id: 4,
+  restaurant_id: 103,
+  partner_id: null,
+  items: [
+    {
+      item_name: 'Salad Bowl',
+      quantity: 1,
+      price: 350
+    }
+  ],
+  order_amount: 350,
+  payment: {
+    mode: 'UPI',
+    status: 'Failed'
+  },
+  order_status: 'Cancelled',
+  delivery_time_minutes: null,
+  order_rating: null
+}
+db.orders.find({ order_rating: { $gte: 4 } })
+{
+  _id: ObjectId('6a1e5de118a720b002504e38'),
+  order_id: 1001,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Biryani',
+      quantity: 2,
+      price: 250
+    },
+    {
+      item_name: 'Kebab',
+      quantity: 1,
+      price: 180
+    }
+  ],
+  order_amount: 680,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 35,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e39'),
+  order_id: 1002,
+  customer_id: 2,
+  restaurant_id: 102,
+  partner_id: 202,
+  items: [
+    {
+      item_name: 'Pizza',
+      quantity: 1,
+      price: 500
+    },
+    {
+      item_name: 'Garlic Bread',
+      quantity: 1,
+      price: 150
+    }
+  ],
+  order_amount: 650,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 42,
+  order_rating: 4
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3c'),
+  order_id: 1005,
+  customer_id: 5,
+  restaurant_id: 105,
+  partner_id: 204,
+  items: [
+    {
+      item_name: 'Tandoori Chicken',
+      quantity: 1,
+      price: 600
+    },
+    {
+      item_name: 'Naan',
+      quantity: 2,
+      price: 60
+    }
+  ],
+  order_amount: 720,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 50,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3d'),
+  order_id: 1006,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Paneer Curry',
+      quantity: 1,
+      price: 300
+    },
+    {
+      item_name: 'Roti',
+      quantity: 4,
+      price: 25
+    }
+  ],
+  order_amount: 400,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 30,
+  order_rating: 4
+}
+db.restaurants.find({ city: { $nin: ["Bangalore", "Chennai"] } })
+{
+  _id: ObjectId('6a1e5c3218a720b002504e23'),
+  restaurant_id: 101,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e26'),
+  restaurant_id: 104,
+  name: 'Burger Street',
+  city: 'Mumbai',
+  cuisine: 'Fast Food',
+  rating: 3.9
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e27'),
+  restaurant_id: 105,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8
+}
+db.orders.find({ "items.item_name": "Biryani" })
+{
+  _id: ObjectId('6a1e5de118a720b002504e38'),
+  order_id: 1001,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Biryani',
+      quantity: 2,
+      price: 250
+    },
+    {
+      item_name: 'Kebab',
+      quantity: 1,
+      price: 180
+    }
+  ],
+  order_amount: 680,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 35,
+  order_rating: 5
+}
+db.orders.find({ "items.item_name": "Pizza" })
+{
+  _id: ObjectId('6a1e5de118a720b002504e39'),
+  order_id: 1002,
+  customer_id: 2,
+  restaurant_id: 102,
+  partner_id: 202,
+  items: [
+    {
+      item_name: 'Pizza',
+      quantity: 1,
+      price: 500
+    },
+    {
+      item_name: 'Garlic Bread',
+      quantity: 1,
+      price: 150
+    }
+  ],
+  order_amount: 650,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 42,
+  order_rating: 4
+}
+db.orders.find({ "items.quantity": { $gt: 1 } })
+{
+  _id: ObjectId('6a1e5de118a720b002504e38'),
+  order_id: 1001,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Biryani',
+      quantity: 2,
+      price: 250
+    },
+    {
+      item_name: 'Kebab',
+      quantity: 1,
+      price: 180
+    }
+  ],
+  order_amount: 680,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 35,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3a'),
+  order_id: 1003,
+  customer_id: 3,
+  restaurant_id: 104,
+  partner_id: 203,
+  items: [
+    {
+      item_name: 'Burger',
+      quantity: 2,
+      price: 180
+    },
+    {
+      item_name: 'Fries',
+      quantity: 1,
+      price: 120
+    }
+  ],
+  order_amount: 480,
+  payment: {
+    mode: 'Cash',
+    status: 'Pending'
+  },
+  order_status: 'Pending',
+  delivery_time_minutes: null,
+  order_rating: null
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3c'),
+  order_id: 1005,
+  customer_id: 5,
+  restaurant_id: 105,
+  partner_id: 204,
+  items: [
+    {
+      item_name: 'Tandoori Chicken',
+      quantity: 1,
+      price: 600
+    },
+    {
+      item_name: 'Naan',
+      quantity: 2,
+      price: 60
+    }
+  ],
+  order_amount: 720,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 50,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3d'),
+  order_id: 1006,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Paneer Curry',
+      quantity: 1,
+      price: 300
+    },
+    {
+      item_name: 'Roti',
+      quantity: 4,
+      price: 25
+    }
+  ],
+  order_amount: 400,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 30,
+  order_rating: 4
+}
+ db.orders.find({ "items.price": { $gt: 300 } })
+{
+  _id: ObjectId('6a1e5de118a720b002504e39'),
+  order_id: 1002,
+  customer_id: 2,
+  restaurant_id: 102,
+  partner_id: 202,
+  items: [
+    {
+      item_name: 'Pizza',
+      quantity: 1,
+      price: 500
+    },
+    {
+      item_name: 'Garlic Bread',
+      quantity: 1,
+      price: 150
+    }
+  ],
+  order_amount: 650,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 42,
+  order_rating: 4
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3b'),
+  order_id: 1004,
+  customer_id: 4,
+  restaurant_id: 103,
+  partner_id: null,
+  items: [
+    {
+      item_name: 'Salad Bowl',
+      quantity: 1,
+      price: 350
+    }
+  ],
+  order_amount: 350,
+  payment: {
+    mode: 'UPI',
+    status: 'Failed'
+  },
+  order_status: 'Cancelled',
+  delivery_time_minutes: null,
+  order_rating: null
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3c'),
+  order_id: 1005,
+  customer_id: 5,
+  restaurant_id: 105,
+  partner_id: 204,
+  items: [
+    {
+      item_name: 'Tandoori Chicken',
+      quantity: 1,
+      price: 600
+    },
+    {
+      item_name: 'Naan',
+      quantity: 2,
+      price: 60
+    }
+  ],
+  order_amount: 720,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 50,
+  order_rating: 5
+}
+db.orders.find({}, { _id: 0, order_id: 1, items: 1 })
+{
+  order_id: 1001,
+  items: [
+    {
+      item_name: 'Biryani',
+      quantity: 2,
+      price: 250
+    },
+    {
+      item_name: 'Kebab',
+      quantity: 1,
+      price: 180
+    }
+  ]
+}
+{
+  order_id: 1002,
+  items: [
+    {
+      item_name: 'Pizza',
+      quantity: 1,
+      price: 500
+    },
+    {
+      item_name: 'Garlic Bread',
+      quantity: 1,
+      price: 150
+    }
+  ]
+}
+{
+  order_id: 1003,
+  items: [
+    {
+      item_name: 'Burger',
+      quantity: 2,
+      price: 180
+    },
+    {
+      item_name: 'Fries',
+      quantity: 1,
+      price: 120
+    }
+  ]
+}
+{
+  order_id: 1004,
+  items: [
+    {
+      item_name: 'Salad Bowl',
+      quantity: 1,
+      price: 350
+    }
+  ]
+}
+{
+  order_id: 1005,
+  items: [
+    {
+      item_name: 'Tandoori Chicken',
+      quantity: 1,
+      price: 600
+    },
+    {
+      item_name: 'Naan',
+      quantity: 2,
+      price: 60
+    }
+  ]
+}
+{
+  order_id: 1006,
+  items: [
+    {
+      item_name: 'Paneer Curry',
+      quantity: 1,
+      price: 300
+    },
+    {
+      item_name: 'Roti',
+      quantity: 4,
+      price: 25
+    }
+  ]
+}
+db.restaurants.find().sort({ rating: -1 })
+{
+  _id: ObjectId('6a1e5c3218a720b002504e27'),
+  restaurant_id: 105,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e25'),
+  restaurant_id: 103,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e23'),
+  restaurant_id: 101,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e24'),
+  restaurant_id: 102,
+  name: 'Pizza Corner',
+  city: 'Bangalore',
+  cuisine: 'Italian',
+  rating: 4.2
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e26'),
+  restaurant_id: 104,
+  name: 'Burger Street',
+  city: 'Mumbai',
+  cuisine: 'Fast Food',
+  rating: 3.9
+}
+db.restaurants.find().sort({ rating: -1 }).limit(3)
+{
+  _id: ObjectId('6a1e5c3218a720b002504e27'),
+  restaurant_id: 105,
+  name: 'Royal Tandoor',
+  city: 'Delhi',
+  cuisine: 'Indian',
+  rating: 4.8
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e25'),
+  restaurant_id: 103,
+  name: 'Green Bowl',
+  city: 'Chennai',
+  cuisine: 'Healthy',
+  rating: 4.7
+}
+{
+  _id: ObjectId('6a1e5c3218a720b002504e23'),
+  restaurant_id: 101,
+  name: 'Spice Hub',
+  city: 'Hyderabad',
+  cuisine: 'Indian',
+  rating: 4.5
+}
+db.orders.find().sort({ order_amount: -1 })
+{
+  _id: ObjectId('6a1e5de118a720b002504e3c'),
+  order_id: 1005,
+  customer_id: 5,
+  restaurant_id: 105,
+  partner_id: 204,
+  items: [
+    {
+      item_name: 'Tandoori Chicken',
+      quantity: 1,
+      price: 600
+    },
+    {
+      item_name: 'Naan',
+      quantity: 2,
+      price: 60
+    }
+  ],
+  order_amount: 720,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 50,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e38'),
+  order_id: 1001,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Biryani',
+      quantity: 2,
+      price: 250
+    },
+    {
+      item_name: 'Kebab',
+      quantity: 1,
+      price: 180
+    }
+  ],
+  order_amount: 680,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 35,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e39'),
+  order_id: 1002,
+  customer_id: 2,
+  restaurant_id: 102,
+  partner_id: 202,
+  items: [
+    {
+      item_name: 'Pizza',
+      quantity: 1,
+      price: 500
+    },
+    {
+      item_name: 'Garlic Bread',
+      quantity: 1,
+      price: 150
+    }
+  ],
+  order_amount: 650,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 42,
+  order_rating: 4
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3a'),
+  order_id: 1003,
+  customer_id: 3,
+  restaurant_id: 104,
+  partner_id: 203,
+  items: [
+    {
+      item_name: 'Burger',
+      quantity: 2,
+      price: 180
+    },
+    {
+      item_name: 'Fries',
+      quantity: 1,
+      price: 120
+    }
+  ],
+  order_amount: 480,
+  payment: {
+    mode: 'Cash',
+    status: 'Pending'
+  },
+  order_status: 'Pending',
+  delivery_time_minutes: null,
+  order_rating: null
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3d'),
+  order_id: 1006,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Paneer Curry',
+      quantity: 1,
+      price: 300
+    },
+    {
+      item_name: 'Roti',
+      quantity: 4,
+      price: 25
+    }
+  ],
+  order_amount: 400,
+  payment: {
+    mode: 'Card',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 30,
+  order_rating: 4
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e3b'),
+  order_id: 1004,
+  customer_id: 4,
+  restaurant_id: 103,
+  partner_id: null,
+  items: [
+    {
+      item_name: 'Salad Bowl',
+      quantity: 1,
+      price: 350
+    }
+  ],
+  order_amount: 350,
+  payment: {
+    mode: 'UPI',
+    status: 'Failed'
+  },
+  order_status: 'Cancelled',
+  delivery_time_minutes: null,
+  order_rating: null
+}
+db.orders.find().sort({ order_amount: -1 }).limit(2)
+{
+  _id: ObjectId('6a1e5de118a720b002504e3c'),
+  order_id: 1005,
+  customer_id: 5,
+  restaurant_id: 105,
+  partner_id: 204,
+  items: [
+    {
+      item_name: 'Tandoori Chicken',
+      quantity: 1,
+      price: 600
+    },
+    {
+      item_name: 'Naan',
+      quantity: 2,
+      price: 60
+    }
+  ],
+  order_amount: 720,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 50,
+  order_rating: 5
+}
+{
+  _id: ObjectId('6a1e5de118a720b002504e38'),
+  order_id: 1001,
+  customer_id: 1,
+  restaurant_id: 101,
+  partner_id: 201,
+  items: [
+    {
+      item_name: 'Biryani',
+      quantity: 2,
+      price: 250
+    },
+    {
+      item_name: 'Kebab',
+      quantity: 1,
+      price: 180
+    }
+  ],
+  order_amount: 680,
+  payment: {
+    mode: 'UPI',
+    status: 'Success'
+  },
+  order_status: 'Delivered',
+  delivery_time_minutes: 35,
+  order_rating: 5
+}
+db.delivery_partners.find().sort({ rating: -1 })
+{
+  _id: ObjectId('6a1e5d0318a720b002504e34'),
+  partner_id: 203,
+  partner_name: 'SpeedKart',
+  city: 'Mumbai',
+  rating: 4.6
+}
+{
+  _id: ObjectId('6a1e5d0318a720b002504e32'),
+  partner_id: 201,
+  partner_name: 'FastMove Logistics',
+  city: 'Hyderabad',
+  rating: 4.4
+}
+{
+  _id: ObjectId('6a1e5d0318a720b002504e33'),
+  partner_id: 202,
+  partner_name: 'QuickShip',
+  city: 'Bangalore',
+  rating: 4.1
+}
+{
+  _id: ObjectId('6a1e5d0318a720b002504e35'),
+  partner_id: 204,
+  partner_name: 'DoorDash India',
+  city: 'Delhi',
+  rating: 4
+}
+db.customers.updateOne({ customer_id: 1 }, { $set: { membership: "Platinum" } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+ db.restaurants.updateOne({ restaurant_id: 104 }, { $set: { rating: 4.1 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.orders.updateOne({ order_id: 1003 }, { $set: { order_status: "Delivered" } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.orders.updateOne({ order_id: 1003 }, { $set: { delivery_time_minutes: 45 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.customers.updateMany({}, { $set: { active: true } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+db.customers.updateMany({}, { $unset: { active: "" } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+ db.orders.updateOne(
+       { order_id: 1006 },
+       { $push: { items: { item_name: "Curd Rice", quantity: 1, price: 120 } } }
+   )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.orders.deleteMany({ order_status: "Cancelled" })
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.restaurants.deleteMany({ rating: { $lt: 4.0 } })
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+db.customers.countDocuments()
+5
+db.orders.countDocuments()
+5
+ db.orders.countDocuments({ order_status: "Delivered" })
+5
+db.orders.countDocuments({ "payment.status": "Failed" })
+0
+ db.customers.distinct("city")
+[ 'Bangalore', 'Chennai', 'Delhi', 'Hyderabad', 'Mumbai' ]
+db.restaurants.distinct("cuisine")
+[ 'Fast Food', 'Healthy', 'Indian', 'Italian' ]
+db.orders.distinct("payment.mode")
+[ 'Card', 'Cash', 'UPI' ]
+db.orders.aggregate([
+  {
+    $group: {
+      _id: "$payment.mode",
+      TotalRevenue: { $sum: "$order_amount" }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      PaymentMode: "$_id",
+      TotalRevenue: 1
+    }
+  }
+])
+{
+  TotalRevenue: 1050,
+  PaymentMode: 'Card'
+}
+{
+  TotalRevenue: 1400,
+  PaymentMode: 'UPI'
+}
+{
+  TotalRevenue: 480,
+  PaymentMode: 'Cash'
+}
+db.orders.aggregate([
+  {
+    $group: {
+      _id: "$order_status",
+      TotalRevenue: { $sum: "$order_amount" }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      OrderStatus: "$_id",
+      TotalRevenue: 1
+    }
+  }
+])
+{
+  TotalRevenue: 2930,
+  OrderStatus: 'Delivered'
+}
+db.orders.aggregate([
+  {
+    $match: { order_status: "Delivered" }
+  },
+  {
+    $group: {
+      _id: null,
+      AverageDeliveryTime: { $avg: "$delivery_time_minutes" }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      AverageDeliveryTime: 1
+    }
+  }
+])
+{
+  AverageDeliveryTime: 40.4
+}
+db.orders.aggregate([
+  {
+    $group: {
+      _id: "$customer_id",
+      TotalOrders: { $sum: 1 },
+      TotalAmount: { $sum: "$order_amount" }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      CustomerID: "$_id",
+      TotalOrders: 1,
+      TotalAmount: 1
+    }
+  }
+])
+{
+  TotalOrders: 1,
+  TotalAmount: 480,
+  CustomerID: 3
+}
+{
+  TotalOrders: 2,
+  TotalAmount: 1080,
+  CustomerID: 1
+}
+{
+  TotalOrders: 1,
+  TotalAmount: 650,
+  CustomerID: 2
+}
+{
+  TotalOrders: 1,
+  TotalAmount: 720,
+  CustomerID: 5
+}
+db.orders.aggregate([
+  {
+    $group: {
+      _id: "$restaurant_id",
+      TotalOrders: { $sum: 1 },
+      TotalRevenue: { $sum: "$order_amount" }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      RestaurantID: "$_id",
+      TotalOrders: 1,
+      TotalRevenue: 1
+    }
+  }
+])
+{
+  TotalOrders: 1,
+  TotalRevenue: 720,
+  RestaurantID: 105
+}
+{
+  TotalOrders: 1,
+  TotalRevenue: 650,
+  RestaurantID: 102
+}
+{
+  TotalOrders: 2,
+  TotalRevenue: 1080,
+  RestaurantID: 101
+}
+{
+  TotalOrders: 1,
+  TotalRevenue: 480,
+  RestaurantID: 104
+}
+db.orders.aggregate([
+  {
+    $match: { order_rating: { $ne: null } }
+  },
+  {
+    $group: {
+      _id: "$restaurant_id",
+      AverageOrderRating: { $avg: "$order_rating" }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      RestaurantID: "$_id",
+      AverageOrderRating: 1
+    }
+  }
+])
+{
+  AverageOrderRating: 5,
+  RestaurantID: 105
+}
+{
+  AverageOrderRating: 4.5,
+  RestaurantID: 101
+}
+{
+  AverageOrderRating: 4,
+  RestaurantID: 102
+}
+db.orders.aggregate([
+  {
+    $group: {
+      _id: "$customer_id",
+      TotalSpending: { $sum: "$order_amount" }
+    }
+  },
+  {
+    $match: {
+      TotalSpending: { $gt: 700 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      CustomerID: "$_id",
+      TotalSpending: 1
+    }
+  }
+])
+{
+  TotalSpending: 1080,
+  CustomerID: 1
+}
+{
+  TotalSpending: 720,
+  CustomerID: 5
+}
+db.orders.aggregate([
+{
+  $lookup: {
+    from: "customers",
+    localField: "customer_id",
+    foreignField: "customer_id",
+    as: "customer"
+  }
+},
+{ $unwind: "$customer" },
+{
+  $project: {
+    _id: 0,
+    OrderID: "$order_id",
+    CustomerName: "$customer.name",
+    City: "$customer.city",
+    OrderAmount: "$order_amount",
+    OrderStatus: "$order_status"
+  }
+}
+])
+{
+  OrderID: 1001,
+  CustomerName: 'Rahul Sharma',
+  City: 'Hyderabad',
+  OrderAmount: 680,
+  OrderStatus: 'Delivered'
+}
+{
+  OrderID: 1002,
+  CustomerName: 'Priya Reddy',
+  City: 'Bangalore',
+  OrderAmount: 650,
+  OrderStatus: 'Delivered'
+}
+{
+  OrderID: 1003,
+  CustomerName: 'Amit Kumar',
+  City: 'Mumbai',
+  OrderAmount: 480,
+  OrderStatus: 'Delivered'
+}
+{
+  OrderID: 1005,
+  CustomerName: 'Arjun Verma',
+  City: 'Delhi',
+  OrderAmount: 720,
+  OrderStatus: 'Delivered'
+}
+{
+  OrderID: 1006,
+  CustomerName: 'Rahul Sharma',
+  City: 'Hyderabad',
+  OrderAmount: 400,
+  OrderStatus: 'Delivered'
+}
+db.orders.aggregate([
+{
+  $lookup: {
+    from: "restaurants",
+    localField: "restaurant_id",
+    foreignField: "restaurant_id",
+    as: "restaurant"
+  }
+},
+{ $unwind: "$restaurant" },
+{
+  $project: {
+    _id: 0,
+    OrderID: "$order_id",
+    RestaurantName: "$restaurant.name",
+    Cuisine: "$restaurant.cuisine",
+    OrderAmount: "$order_amount"
+  }
+}
+])
+{
+  OrderID: 1001,
+  RestaurantName: 'Spice Hub',
+  Cuisine: 'Indian',
+  OrderAmount: 680
+}
+{
+  OrderID: 1002,
+  RestaurantName: 'Pizza Corner',
+  Cuisine: 'Italian',
+  OrderAmount: 650
+}
+{
+  OrderID: 1003,
+  RestaurantName: 'Burger Street',
+  Cuisine: 'Fast Food',
+  OrderAmount: 480
+}
+{
+  OrderID: 1005,
+  RestaurantName: 'Royal Tandoor',
+  Cuisine: 'Indian',
+  OrderAmount: 720
+}
+{
+  OrderID: 1006,
+  RestaurantName: 'Spice Hub',
+  Cuisine: 'Indian',
+  OrderAmount: 400
+}
+db.orders.aggregate([
+{
+  $lookup: {
+    from: "delivery_partners",
+    localField: "partner_id",
+    foreignField: "partner_id",
+    as: "partner"
+  }
+},
+{ $unwind: "$partner" },
+{
+  $project: {
+    _id: 0,
+    OrderID: "$order_id",
+    PartnerName: "$partner.partner_name",
+    DeliveryTime: "$delivery_time_minutes",
+    OrderStatus: "$order_status"
+  }
+}
+])
+{
+  OrderID: 1001,
+  PartnerName: 'FastMove Logistics',
+  DeliveryTime: 35,
+  OrderStatus: 'Delivered'
+}
+{
+  OrderID: 1002,
+  PartnerName: 'QuickShip',
+  DeliveryTime: 42,
+  OrderStatus: 'Delivered'
+}
+{
+  OrderID: 1003,
+  PartnerName: 'SpeedKart',
+  DeliveryTime: 45,
+  OrderStatus: 'Delivered'
+}
+{
+  OrderID: 1005,
+  PartnerName: 'DoorDash India',
+  DeliveryTime: 50,
+  OrderStatus: 'Delivered'
+}
+{
+  OrderID: 1006,
+  PartnerName: 'FastMove Logistics',
+  DeliveryTime: 30,
+  OrderStatus: 'Delivered'
+}
+db.orders.aggregate([
+{
+  $lookup: {
+    from: "customers",
+    localField: "customer_id",
+    foreignField: "customer_id",
+    as: "customer"
+  }
+},
+{
+  $lookup: {
+    from: "restaurants",
+    localField: "restaurant_id",
+    foreignField: "restaurant_id",
+    as: "restaurant"
+  }
+},
+{
+  $lookup: {
+    from: "delivery_partners",
+    localField: "partner_id",
+    foreignField: "partner_id",
+    as: "partner"
+  }
+},
+{
+  $unwind: "$customer"
+},
+{
+  $unwind: "$restaurant"
+},
+{
+  $unwind: {
+    path: "$partner",
+    preserveNullAndEmptyArrays: true
+  }
+},
+{
+  $project: {
+    _id: 0,
+    OrderID: "$order_id",
+    CustomerName: "$customer.name",
+    RestaurantName: "$restaurant.name",
+    Cuisine: "$restaurant.cuisine",
+    PartnerName: "$partner.partner_name",
+    OrderAmount: "$order_amount",
+    PaymentMode: "$payment.mode",
+    PaymentStatus: "$payment.status",
+    OrderStatus: "$order_status",
+    DeliveryTime: "$delivery_time_minutes",
+    Rating: "$order_rating"
+  }
+}
+])
+{
+  OrderID: 1001,
+  CustomerName: 'Rahul Sharma',
+  RestaurantName: 'Spice Hub',
+  Cuisine: 'Indian',
+  PartnerName: 'FastMove Logistics',
+  OrderAmount: 680,
+  PaymentMode: 'UPI',
+  PaymentStatus: 'Success',
+  OrderStatus: 'Delivered',
+  DeliveryTime: 35,
+  Rating: 5
+}
+{
+  OrderID: 1002,
+  CustomerName: 'Priya Reddy',
+  RestaurantName: 'Pizza Corner',
+  Cuisine: 'Italian',
+  PartnerName: 'QuickShip',
+  OrderAmount: 650,
+  PaymentMode: 'Card',
+  PaymentStatus: 'Success',
+  OrderStatus: 'Delivered',
+  DeliveryTime: 42,
+  Rating: 4
+}
+{
+  OrderID: 1003,
+  CustomerName: 'Amit Kumar',
+  RestaurantName: 'Burger Street',
+  Cuisine: 'Fast Food',
+  PartnerName: 'SpeedKart',
+  OrderAmount: 480,
+  PaymentMode: 'Cash',
+  PaymentStatus: 'Pending',
+  OrderStatus: 'Delivered',
+  DeliveryTime: 45,
+  Rating: null
+}
+{
+  OrderID: 1005,
+  CustomerName: 'Arjun Verma',
+  RestaurantName: 'Royal Tandoor',
+  Cuisine: 'Indian',
+  PartnerName: 'DoorDash India',
+  OrderAmount: 720,
+  PaymentMode: 'UPI',
+  PaymentStatus: 'Success',
+  OrderStatus: 'Delivered',
+  DeliveryTime: 50,
+  Rating: 5
+}
+{
+  OrderID: 1006,
+  CustomerName: 'Rahul Sharma',
+  RestaurantName: 'Spice Hub',
+  Cuisine: 'Indian',
+  PartnerName: 'FastMove Logistics',
+  OrderAmount: 400,
+  PaymentMode: 'Card',
+  PaymentStatus: 'Success',
+  OrderStatus: 'Delivered',
+  DeliveryTime: 30,
+  Rating: 4
+}
+
+
+
