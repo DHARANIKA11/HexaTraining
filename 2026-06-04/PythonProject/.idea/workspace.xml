@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb565f02-0ea2-4fd0-b250-c970941914c8" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000000586124" />
+      <entry key="MS500" value="1.0089866554168017" />
+      <entry key="S2" value="1.3078927923578314" />
+      <entry key="S5" value="1.6242518081291677" />
+      <entry key="S10" value="1.7900967115915967" />
+      <entry key="S30" value="1.9331053348852547" />
+      <entry key="S60" value="2.0646238918371145" />
+      <entry key="M2" value="2.5498836752709773" />
+      <entry key="M5" value="5.339966351569536" />
+      <entry key="M10" value="9.73741165828921" />
+      <entry key="M15" value="12.6001527494899" />
+      <entry key="M30" value="16.786600125728352" />
+      <entry key="H1" value="19.58241571774505" />
+      <entry key="H2" value="21.204777613260763" />
+      <entry key="H4" value="22.07957991284616" />
+      <entry key="D1" value="22.843321046217344" />
+      <entry key="W1" value="22.97753562850093" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="1.0727792968546053E-101" />
+      <entry key="S5" value="5.699284059722424E-41" />
+      <entry key="S10" value="1.0499782752060187E-20" />
+      <entry key="S30" value="3.4627315805922117E-7" />
+      <entry key="S60" value="8.31792987060354E-4" />
+      <entry key="M2" value="0.0407821663355493" />
+      <entry key="M5" value="0.42149609100101526" />
+      <entry key="M10" value="0.9181416302818995" />
+      <entry key="M15" value="1.190189148509026" />
+      <entry key="M30" value="1.5428466374238685" />
+      <entry key="H1" value="1.7566139155548113" />
+      <entry key="H2" value="1.8743605831984935" />
+      <entry key="H4" value="1.9361614353248553" />
+      <entry key="D1" value="1.989215907054966" />
+      <entry key="W1" value="1.9984558432054684" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9592641193735371" />
+      <entry key="MS500" value="1.0003612413093266" />
+      <entry key="S2" value="1.3028421512301835" />
+      <entry key="S5" value="1.6210019631345862" />
+      <entry key="S10" value="1.7881489662579264" />
+      <entry key="S30" value="1.9323575958710402" />
+      <entry key="S60" value="2.0649608589681967" />
+      <entry key="M2" value="2.589027038553374" />
+      <entry key="M5" value="5.754733328685747" />
+      <entry key="M10" value="10.647288147144788" />
+      <entry key="M15" value="13.782779371595343" />
+      <entry key="M30" value="18.324205577350586" />
+      <entry key="H1" value="21.335932117806067" />
+      <entry key="H2" value="23.077452659602493" />
+      <entry key="H4" value="24.014861921257765" />
+      <entry key="D1" value="24.8323850676123" />
+      <entry key="W1" value="24.975969640596283" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3EfYjUlSzNAgNlQBY899vBStn2f" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Batch Students.executor": "Run",
+    "Python.batch_students.executor": "Run",
+    "Python.employee record.executor": "Run",
+    "Python.employee_dictionary.executor": "Run",
+    "Python.lsit_of_dictionaries.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-c59985aa861c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.24374.152" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb565f02-0ea2-4fd0-b250-c970941914c8" name="Changes" comment="" />
+      <created>1780571225905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780571225905</updated>
+      <workItem from="1780571226956" duration="3460000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../python Assessment/main (Employee_salaries).py</url>
+          <line>1</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1780571624473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../python Assessment" />
+    <SUITE FILE_PATH="coverage/PythonProject$lsit_of_dictionaries.coverage" NAME="lsit_of_dictionaries Coverage Results" MODIFIED="1780572501812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../python Assessment" />
+    <SUITE FILE_PATH="coverage/PythonProject$Batch_Students.coverage" NAME="Batch Students Coverage Results" MODIFIED="1780572081767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../python Assessment" />
+    <SUITE FILE_PATH="coverage/PythonProject$batch_students.coverage" NAME="batch_students Coverage Results" MODIFIED="1780572193973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../python Assessment" />
+    <SUITE FILE_PATH="coverage/PythonProject$employee_record.coverage" NAME="employee record Coverage Results" MODIFIED="1780572039575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../python Assessment" />
+    <SUITE FILE_PATH="coverage/PythonProject$employee_dictionary.coverage" NAME="employee_dictionary Coverage Results" MODIFIED="1780572366072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../python Assessment" />
+  </component>
+</project>

@@ -49,3 +49,4 @@ with open("employees1.txt", "w") as file:
 
 with open("employees1.txt", "a") as file:
     file.write("Anit\n")
+

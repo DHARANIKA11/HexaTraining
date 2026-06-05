@@ -5,5 +5,3 @@ Highest Salary : 95000
 Lowest Salary : 65000
 Average Salary : 79000.0
 Total Salary : 790000
-
-

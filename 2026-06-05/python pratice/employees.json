@@ -1,34 +1,11 @@
-# Finally Block Example
-
-try:
-    print(10 / 0)
-
-except:
-    print("Error")
-
-finally:
-    print("Connection Closed")
-
-
-# Raise Error Example
-
-salary = -1000
-
-if salary < 0:
-    raise ValueError("Salary cannot be negative")
-
-import json
-
-employees = [
-
+[
     {
         "employee_id": 101,
         "name": "Rahul Sharma",
         "department": "Data Engineering",
-        "salary": 75000,
+        "salary": 90000,
         "city": "Hyderabad"
     },
-
     {
         "employee_id": 102,
         "name": "Priya Reddy",
@@ -36,15 +13,6 @@ employees = [
         "salary": 85000,
         "city": "Bangalore"
     },
-
-    {
-        "employee_id": 103,
-        "name": "Amit Kumar",
-        "department": "Data Engineering",
-        "salary": 65000,
-        "city": "Mumbai"
-    },
-
     {
         "employee_id": 104,
         "name": "Sneha Patel",
@@ -52,14 +20,18 @@ employees = [
         "salary": 95000,
         "city": "Chennai"
     },
-
     {
         "employee_id": 105,
         "name": "Farhan Ali",
         "department": "Cloud Engineering",
         "salary": 80000,
         "city": "Delhi"
+    },
+    {
+        "employee_id": 106,
+        "name": "Neha Singh",
+        "department": "AI Engineering",
+        "salary": 72000,
+        "city": "Hyderabad"
     }
-
 ]
-
