@@ -1,0 +1,35 @@
+CRICKET TOURNAMENT REPORT
+========================================
+
+Total Players : 12
+Total Runs    : 6606
+Average Runs  : 550.50
+
+Highest Scorer : Virat Kohli (741 runs)
+Lowest Scorer  : MS Dhoni (280 runs)
+
+TEAM WISE RUNS
+------------------------------
+CSK : 890
+GT : 620
+KKR : 930
+LSG : 590
+MI : 990
+RCB : 1411
+RR : 1175
+
+TOP 5 PLAYERS
+------------------------------
+Virat Kohli - 741 runs
+Faf du Plessis - 670 runs
+Yashasvi Jaiswal - 625 runs
+Shubman Gill - 620 runs
+Ruturaj Gaikwad - 610 runs
+
+MOST FOURS
+------------------------------
+Virat Kohli - 62 fours
+
+MOST SIXES
+------------------------------
+Virat Kohli - 38 sixes

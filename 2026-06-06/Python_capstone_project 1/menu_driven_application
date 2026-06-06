@@ -1,0 +1,110 @@
+import pandas as pd
+
+df = pd.read_csv("orders.csv")
+df["Revenue"] = df["quantity"] * df["price"]
+
+def view_orders():
+print("\nALL ORDERS")
+print(df)
+
+def revenue_analysis():
+print("\nREVENUE ANALYSIS")
+print("Total Revenue:", df["Revenue"].sum())
+print("Average Order Value:", df["Revenue"].mean())
+print("Highest Order Value:", df["Revenue"].max())
+print("Lowest Order Value:", df["Revenue"].min())
+
+def product_analysis():
+print("\nPRODUCT ANALYSIS")
+
+```
+product_qty = df.groupby("product")["quantity"].sum()
+product_revenue = df.groupby("product")["Revenue"].sum()
+
+print("\nQuantity Sold By Product:")
+print(product_qty)
+
+print("\nRevenue By Product:")
+print(product_revenue)
+
+print("\nTop Selling Product:")
+print(product_qty.idxmax())
+```
+
+def city_analysis():
+print("\nCITY ANALYSIS")
+
+```
+city_orders = df.groupby("city")["order_id"].count()
+city_revenue = df.groupby("city")["Revenue"].sum()
+
+print("\nOrder Count By City:")
+print(city_orders)
+
+print("\nRevenue By City:")
+print(city_revenue)
+
+print("\nTop Revenue City:")
+print(city_revenue.idxmax())
+```
+
+def export_reports():
+
+```
+with open("sales_summary_report.txt", "w") as report:
+
+    report.write("SALES SUMMARY REPORT\n")
+    report.write("=" * 40 + "\n\n")
+
+    report.write(f"Total Orders: {len(df)}\n")
+    report.write(f"Total Revenue: {df['Revenue'].sum()}\n")
+    report.write(f"Average Order Value: {df['Revenue'].mean():.2f}\n")
+    report.write(f"Highest Order Value: {df['Revenue'].max()}\n")
+    report.write(f"Lowest Order Value: {df['Revenue'].min()}\n")
+
+high_value = df[df["Revenue"] > 50000]
+high_value.to_csv("high_value_orders.csv", index=False)
+
+electronics = df[df["category"] == "Electronics"]
+electronics.to_csv("electronics_orders.csv", index=False)
+
+print("\nReports Exported Successfully!")
+```
+
+while True:
+
+```
+print("\n" + "=" * 40)
+print("E-COMMERCE ANALYSIS SYSTEM")
+print("=" * 40)
+print("1. View Orders")
+print("2. Revenue Analysis")
+print("3. Product Analysis")
+print("4. City Analysis")
+print("5. Export Reports")
+print("6. Exit")
+
+choice = input("\nEnter your choice: ")
+
+if choice == "1":
+    view_orders()
+
+elif choice == "2":
+    revenue_analysis()
+
+elif choice == "3":
+    product_analysis()
+
+elif choice == "4":
+    city_analysis()
+
+elif choice == "5":
+    export_reports()
+
+elif choice == "6":
+    print("Thank You!")
+    break
+
+else:
+    print("Invalid Choice. Please Try Again.")
+```

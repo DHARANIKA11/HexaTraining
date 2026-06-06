@@ -1,0 +1,25 @@
+SALES SUMMARY REPORT
+==================================================
+
+Total Orders          : 12
+Total Revenue         : 548000
+Average Order Value   : 45666.67
+Highest Order Value   : 94000
+Lowest Order Value    : 13000
+
+Revenue By City
+------------------------------
+Bangalore       : 95000
+Chennai         : 70000
+Delhi           : 92000
+Hyderabad       : 200000
+Mumbai          : 69000
+Pune            : 22000
+
+Revenue By Category
+------------------------------
+Electronics     : 474000
+Furniture       : 74000
+
+Top Selling Product         : Chair
+Top Revenue Generating City : Hyderabad
