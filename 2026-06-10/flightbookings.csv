@@ -1,0 +1,12 @@
+
+booking_id,passenger_name,from_city,to_city,airline,ticket_price,travel_class,status
+1001,Aarav Mehta,Hyderabad,Delhi,IndiGo,6500,Economy,Confirmed
+1002,Sana Khan,Bangalore,Mumbai,Vistara,8200,Economy,Confirmed
+1003,John Mathew,Chennai,Delhi,Air India,12000,Business,Confirmed
+1004,Ayesha Begum,Hyderabad,Dubai,Emirates,28000,Economy,Confirmed
+1005,Vikram Rao,Mumbai,Singapore,Singapore Airlines,35000,Business,Pending
+1006,Divya Sharma,Delhi,Hyderabad,IndiGo,5900,Economy,Cancelled
+1007,Imran Ali,Pune,Bangalore,Akasa Air,4800,Economy,Confirmed
+1008,Meera Nair,Kochi,Dubai,Emirates,26000,Economy,Confirmed
+1009,Rohan Das,Kolkata,Delhi,Air India,7400,Economy,Pending
+1010,Nisha Reddy,Bangalore,London,British Airways,62000,Business,Confirmed

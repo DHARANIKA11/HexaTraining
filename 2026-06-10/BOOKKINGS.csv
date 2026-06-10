@@ -1,0 +1,16 @@
+booking_id,customer_name,city,service_type,provider,booking_amount,booking_status,payment_mode
+1001,Aarav Mehta,Hyderabad,Flight,IndiGo,6500,Confirmed,UPI
+1002,Sana Khan,Bangalore,Hotel,Pearl Grand,4500,Confirmed,Card
+1003,John Mathew,,Flight,Air India,12000,Confirmed,UPI
+1004,Ayesha Begum,Hyderabad,Hotel,,7500,Pending,Cash
+1005,Vikram Rao,Mumbai,Flight,Vistara,,Confirmed,Card
+1006,Divya Sharma,Delhi,Flight,IndiGo,5900,Cancelled,
+1007,Imran Ali,Pune,Hotel,Budget Inn,2200,,UPI
+1008,Meera Nair,Kochi,Hotel,Hill View Resort,7500,Confirmed,Card
+1009,Rohan Das,Kolkata,Flight,Air India,7400,Pending,UPI
+1010,Nisha Reddy,Bangalore,Flight,British Airways,62000,Confirmed,Card
+1011,Farhan Ali,,Hotel,Skyline Suites,22000,Confirmed,
+1012,Neha Singh,Hyderabad,,Emirates,28000,Confirmed,UPI
+1013,Arjun Verma,Chennai,Flight,,15000,Cancelled,Cash
+1014,Kavya Nair,Mumbai,Hotel,Sea View Stay,,Pending,Card
+1015,Ravi Kumar,Delhi,Flight,SpiceJet,4800,Confirmed,UPI

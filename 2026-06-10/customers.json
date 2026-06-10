@@ -1,0 +1,77 @@
+[
+{
+"customer_id": 1,
+"name": "Aarav Mehta",
+"city": "Hyderabad",
+"membership": "Gold",
+"contact": {
+"phone": "9876500011",
+"email": "aarav@mail.com"
+},
+"preferences": {
+"preferred_service": "Flight",
+"budget_range": "Medium"
+}
+},
+{
+"customer_id": 2,
+"name": "Sana Khan",
+"city": "Bangalore",
+"membership": "Silver",
+"contact": {
+"phone": null,
+"email": "sana@mail.com"
+},
+"preferences": {
+"preferred_service": "Hotel",
+"budget_range": null
+}
+},
+{
+"customer_id": 3,
+29. Compare both averages.
+30. Save clean data as clean_bookings.parquet.
+
+"name": "John Mathew",
+"city": null,
+"membership": "Gold",
+"contact": {
+"phone": "9876500013",
+"email": null
+},
+"preferences": {
+"preferred_service": "Flight",
+"budget_range": "High"
+}
+},
+{
+"customer_id": 4,
+"name": "Ayesha Begum",
+"city": "Hyderabad",
+"membership": null,
+"contact": {
+"phone": "9876500014",
+"email": "ayesha@mail.com"
+},
+"preferences": {
+"preferred_service": null,
+"budget_range": "Low"
+}
+},
+{
+"customer_id": 5,
+"name": "Vikram Rao",
+"city": "Mumbai",
+"membership": "Platinum",
+"contact": {
+"phone": null,
+"email": null
+},
+"preferences": {
+"preferred_service": "Flight",
+"budget_range": "High"
+}
+}
+]
+
+

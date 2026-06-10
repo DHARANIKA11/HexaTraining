@@ -1,0 +1,72 @@
+[
+  {
+    "hotel_id": 201,
+    "hotel_name": "Pearl Grand",
+    "city": "Hyderabad",
+    "category": "Business",
+    "rating": 4.4,
+    "rooms_available": 25,
+    "price_per_night": 4500,
+    "amenities": ["wifi", "breakfast", "gym"],
+    "contact": {
+      "phone": "9876500011",
+      "email": "pearlgrand@mail.com"
+    }
+  },
+  {
+    "hotel_id": 202,
+    "hotel_name": "Marina Bay Stay",
+    "city": "Dubai",
+    "category": "Luxury",
+    "rating": 4.8,
+    "rooms_available": 12,
+    "price_per_night": 18000,
+    "amenities": ["wifi", "pool", "spa", "sea_view"],
+    "contact": {
+      "phone": "9876500012",
+      "email": "marinabay@mail.com"
+    }
+  },
+  {
+    "hotel_id": 203,
+    "hotel_name": "Budget Inn",
+    "city": "Delhi",
+    "category": "Budget",
+    "rating": 3.9,
+    "rooms_available": 40,
+    "price_per_night": 2200,
+    "amenities": ["wifi"],
+    "contact": {
+      "phone": null,
+      "email": "budgetinn@mail.com"
+    }
+  },
+  {
+    "hotel_id": 204,
+    "hotel_name": "Hill View Resort",
+    "city": "Kochi",
+    "category": "Resort",
+    "rating": 4.5,
+    "rooms_available": 18,
+    "price_per_night": 7500,
+    "amenities": ["wifi", "breakfast", "pool"],
+    "contact": {
+      "phone": "9876500014",
+      "email": null
+    }
+  },
+  {
+    "hotel_id": 205,
+    "hotel_name": "Skyline Suites",
+    "city": "London",
+    "category": "Luxury",
+    "rating": 4.7,
+    "rooms_available": 8,
+    "price_per_night": 22000,
+    "amenities": ["wifi", "breakfast", "spa"],
+    "contact": {
+      "phone": "9876500015",
+      "email": "skyline@mail.com"
+    }
+  }
+]
