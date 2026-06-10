@@ -29,8 +29,7 @@
 },
 {
 "customer_id": 3,
-29. Compare both averages.
-30. Save clean data as clean_bookings.parquet.
+
 
 "name": "John Mathew",
 "city": null,
