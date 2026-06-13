@@ -1,0 +1,13 @@
+customer_id,customer_name,city,state,age,gender,plan_id,status
+101,Rahul Sharma,Hyderabad,Telangana,35,Male,P101,Active
+102,Priya Reddy,Bangalore,Karnataka,29,Female,P102,Active
+103,Amit Kumar,Mumbai,Maharashtra,42,Male,P103,Inactive
+104,Sneha Patel,Chennai,Tamil Nadu,31,Female,P101,Active
+105,Farhan Ali,Delhi,Delhi,55,Male,P104,Active
+106,Neha Singh,Pune,Maharashtra,38,Female,P102,Active
+107,Arjun Verma,Hyderabad,Telangana,26,Male,P103,Inactive
+108,Meera Nair,Kochi,Kerala,48,Female,P104,Active
+109,Kiran Rao,Bangalore,Karnataka,33,Male,P101,Active
+110,Nisha Reddy,Delhi,Delhi,41,Female,P102,Active
+111,Ravi Kumar,Mumbai,Maharashtra,45,Male,P105,Active
+112,Ayesha Khan,Hyderabad,Telangana,28,Female,,Active

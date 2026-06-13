@@ -1,0 +1,54 @@
+
+
+[
+  {
+    "supplier_id": "S201",
+    "supplier_name": "TechSource India",
+    "city": "Hyderabad",
+    "rating": 4.5,
+    "contact": {
+      "phone": "9876500011",
+      "email": "techsource@mail.com"
+    }
+  },
+  {
+    "supplier_id": "S202",
+    "supplier_name": "MobileWorld Distributors",
+    "city": "Bangalore",
+    "rating": 4.2,
+    "contact": {
+      "phone": null,
+      "email": "mobileworld@mail.com"
+    }
+  },
+  {
+    "supplier_id": "S203",
+    "supplier_name": "HomeTech Supply",
+    "city": "Mumbai",
+    "rating": 4.4,
+    "contact": {
+      "phone": "9876500013",
+      "email": null
+    }
+  },
+  {
+    "supplier_id": "S204",
+    "supplier_name": "Urban Furniture Co",
+    "city": "Delhi",
+    "rating": 4.0,
+    "contact": {
+      "phone": "9876500014",
+      "email": "urban@mail.com"
+    }
+  },
+  {
+    "supplier_id": "S205",
+    "supplier_name": "Fashion Direct",
+    "city": "Pune",
+    "rating": 3.8,
+    "contact": {
+      "phone": null,
+      "email": null
+    }
+  }
+]

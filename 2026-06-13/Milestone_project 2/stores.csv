@@ -1,0 +1,9 @@
+store_id,store_name,city,state,store_type,manager_name
+S101,Metro Mart Hyderabad,Hyderabad,Telangana,Supermarket,Rahul Sharma
+S102,Metro Mart Bangalore,Bangalore,Karnataka,Supermarket,Priya Reddy
+S103,Metro Mart Mumbai,Mumbai,Maharashtra,Hypermarket,Amit Kumar
+S104,Metro Mart Chennai,Chennai,Tamil Nadu,Supermarket,Sneha Patel
+S105,Metro Mart Delhi,Delhi,Delhi,Hypermarket,Farhan Ali
+S106,Metro Mart Pune,Pune,Maharashtra,Mini Store,Neha Singh
+S107,Metro Mart Kochi,Kochi,Kerala,Mini Store,Arjun Verma
+S108,Metro Mart Jaipur,Jaipur,Rajasthan,Supermarket,Meera Nair

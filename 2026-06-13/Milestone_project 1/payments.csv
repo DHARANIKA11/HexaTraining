@@ -1,0 +1,17 @@
+
+payment_id,customer_id,bill_month,amount_paid,payment_mode,payment_status
+5001,101,2026-01,499,UPI,Success
+5002,102,2026-01,799,Card,Success
+5003,103,2026-01,299,Cash,Failed
+5004,104,2026-01,499,UPI,Success
+5005,105,2026-01,1199,Card,Success
+5006,106,2026-01,799,UPI,Success
+5007,107,2026-01,299,Cash,Pending
+5008,108,2026-01,1199,Card,Success
+5009,109,2026-01,499,UPI,Success
+5010,110,2026-01,799,UPI,Success
+5011,112,2026-01,,UPI,Success
+5012,101,2026-02,499,Card,Success
+5013,102,2026-02,799,UPI,Success
+5014,104,2026-02,499,UPI,Success
+5015,105,2026-02,1199,,Pending

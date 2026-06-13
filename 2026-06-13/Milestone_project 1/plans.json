@@ -1,0 +1,46 @@
+[
+{
+"plan_id":"P101",
+"plan_name":"Smart Basic",
+"monthly_fee":499,
+"data_limit_gb":50,
+"features":{
+"unlimited_calls":true,
+"ott_included":false,
+"roaming":"National"
+}
+},
+{
+"plan_id":"P102",
+"plan_name":"Smart Plus",
+"monthly_fee":799,
+"data_limit_gb":75,
+"features":{
+"unlimited_calls":true,
+"ott_included":true,
+"roaming":"National"
+}
+},
+{
+"plan_id":"P103",
+"plan_name":"Budget Saver",
+"monthly_fee":299,
+"data_limit_gb":25,
+"features":{
+"unlimited_calls":false,
+"ott_included":false,
+"roaming":null
+}
+},
+{
+"plan_id":"P104",
+"plan_name":"Premium Max",
+"monthly_fee":1199,
+"data_limit_gb":100,
+"features":{
+"unlimited_calls":true,
+"ott_included":true,
+"roaming":"International"
+}
+}
+]

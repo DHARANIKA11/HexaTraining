@@ -1,0 +1,13 @@
+product_id,product_name,category,brand,supplier_id,unit_price
+P101,Laptop,Electronics,Lenovo,S201,65000
+P102,Mobile,Electronics,Samsung,S202,25000
+P103,Television,Electronics,LG,S203,45000
+P104,Office Chair,Furniture,Featherlite,S204,7000
+P105,Study Table,Furniture,Urban Ladder,S204,12000
+P106,Shoes,Fashion,Nike,S205,4500
+P107,Watch,Fashion,Fastrack,S206,8000
+P108,Backpack,Fashion,Wildcraft,S206,2500
+P109,Refrigerator,Electronics,Whirlpool,S203,38000
+P110,Sofa,Furniture,Godrej,S204,32000
+P111,Headphones,Electronics,Sony,S999,3000
+P112,T-Shirt,Fashion,Puma,,1500
