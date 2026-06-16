@@ -1,0 +1,9 @@
+doctor_id,doctor_name,specialization,city,experience_years,consultation_fee
+D101,Dr. Ramesh,Cardiology,Hyderabad,12,1500
+D102,Dr. Priya,Neurology,Bangalore,10,2000
+D103,Dr. Anita,Dermatology,Chennai,8,1000
+D104,Dr. Suresh,Orthopedics,Mumbai,15,2500
+D105,Dr. Meera,Pediatrics,Delhi,6,1200
+D106,Dr. Kiran,Cardiology,Hyderabad,20,3000
+D107,Dr. Farhan,Neurology,Pune,5,1800
+D108,Dr. Nisha,Dermatology,Kochi,9,1100

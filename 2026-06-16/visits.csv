@@ -1,0 +1,11 @@
+visit_id,patient_name,doctor_id,visit_date,diagnosis,bill_amount,payment_status
+V1001,Rahul Sharma,D101,2026-01-10,Heart Checkup,5000,Paid
+V1002,Priya Reddy,D102,2026-01-10,Migraine,3500,Paid
+V1003,Amit Kumar,D103,2026-01-11,Skin Allergy,2000,Pending
+V1004,Sneha Patel,D104,2026-01-11,Fracture,12000,Paid
+V1005,Farhan Ali,D105,2026-01-12,Fever,1500,Paid
+V1006,Neha Singh,D106,2026-01-12,Heart Checkup,7000,Paid
+V1007,Arjun Verma,D120,2026-01-13,Migraine,4000,Paid
+V1008,Meera Nair,D103,2026-01-13,Skin Allergy,Pending
+V1009,Kiran Rao,D104,2026-01-14,Back Pain,6000,Paid
+V1010,Nisha Reddy,D101,2026-01-14,Heart Checkup,5500,Paid

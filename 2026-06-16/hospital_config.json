@@ -1,0 +1,42 @@
+[
+{
+"hospital_id": "H101",
+"hospital_name": "Apollo Hospital",
+"city": "Hyderabad",
+"contact": {
+"phone": "9876500011",
+"email": "[apollo@mail.com](mailto:apollo@mail.com)"
+},
+"services": [
+"Cardiology",
+"Neurology",
+"Dermatology"
+]
+},
+{
+"hospital_id": "H102",
+"hospital_name": "Yashoda Hospital",
+"city": "Hyderabad",
+"contact": {
+"phone": null,
+"email": "[yashoda@mail.com](mailto:yashoda@mail.com)"
+},
+"services": [
+"Cardiology",
+"Orthopedics"
+]
+},
+{
+"hospital_id": "H103",
+"hospital_name": "Care Hospital",
+"city": "Bangalore",
+"contact": {
+"phone": "9876500013",
+"email": null
+},
+"services": [
+"Neurology",
+"Pediatrics"
+]
+}
+]
