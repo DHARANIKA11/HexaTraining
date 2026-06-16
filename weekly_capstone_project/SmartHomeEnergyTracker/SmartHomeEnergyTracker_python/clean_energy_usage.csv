@@ -1,0 +1,6 @@
+device_id,device_name,room_name,energy_kwh,timestamp
+1,Fan,Living Room,2.5,2026-06-15 10:00:00
+2,TV,Living Room,1.2,2026-06-15 11:00:00
+3,Fridge,Kitchen,3.4,2026-06-15 12:00:00
+4,AC,Bedroom,5.1,2026-06-15 13:00:00
+5,Light,Bedroom,0.6,2026-06-15 14:00:00

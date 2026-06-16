@@ -1,0 +1,9 @@
+expense_id,user_id,category,amount,date,description,month
+101,1,Food,500.0,2026-06-01,Restaurant,2026-06
+102,1,Transport,200.0,2026-06-02,Bus Ticket,2026-06
+103,2,Shopping,1500.0,2026-06-03,Clothes,2026-06
+104,1,Bills,900.0,2026-06-05,Electricity Bill,2026-06
+105,2,Food,350.0,2026-06-10,Lunch,2026-06
+106,1,Entertainment,700.0,2026-06-15,Movie,2026-06
+107,2,Transport,250.0,2026-06-20,Cab,2026-06
+108,1,Shopping,1200.0,2026-06-25,Shoes,2026-06

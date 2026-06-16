@@ -1,0 +1,360 @@
+use SmartHomeEnergyTracker
+switched to db SmartHomeEnergyTracker
+use("SmartHomeEnergyTracker")
+already on db SmartHomeEnergyTracker
+db.createCollection("rooms")
+{ ok: 1 }
+db.rooms.insertMany([
+  {
+    room_id: 1,
+    room_name: "Living Room",
+    floor_no: 1
+  },
+  {
+    room_id: 2,
+    room_name: "Kitchen",
+    floor_no: 1
+  },
+  {
+    room_id: 3,
+    room_name: "Bedroom",
+    floor_no: 2
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a2f900dd8c2e9112b9def9c'),
+    '1': ObjectId('6a2f900dd8c2e9112b9def9d'),
+    '2': ObjectId('6a2f900dd8c2e9112b9def9e')
+  }
+}
+db.createCollection("devices")
+{ ok: 1 }
+db.devices.insertMany([
+  {
+    device_id: 1,
+    device_name: "Fan",
+    room_id: 1,
+    device_status: "ON"
+  },
+  {
+    device_id: 2,
+    device_name: "TV",
+    room_id: 1,
+    device_status: "OFF"
+  },
+  {
+    device_id: 3,
+    device_name: "Fridge",
+    room_id: 2,
+    device_status: "ON"
+  },
+  {
+    device_id: 4,
+    device_name: "AC",
+    room_id: 3,
+    device_status: "ON"
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a2f9021d8c2e9112b9def9f'),
+    '1': ObjectId('6a2f9021d8c2e9112b9defa0'),
+    '2': ObjectId('6a2f9021d8c2e9112b9defa1'),
+    '3': ObjectId('6a2f9021d8c2e9112b9defa2')
+  }
+}
+db.createCollection("energy_logs")
+{ ok: 1 }
+db.energy_logs.insertMany([
+  {
+    device_id: 1,
+    energy_used: 2.5,
+    usage_date: "2026-06-15",
+    usage_time: "10:00:00"
+  },
+  {
+    device_id: 2,
+    energy_used: 1.2,
+    usage_date: "2026-06-15",
+    usage_time: "11:00:00"
+  },
+  {
+    device_id: 3,
+    energy_used: 3.4,
+    usage_date: "2026-06-15",
+    usage_time: "12:00:00"
+  },
+  {
+    device_id: 4,
+    energy_used: 5.1,
+    usage_date: "2026-06-15",
+    usage_time: "13:00:00"
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a2f9030d8c2e9112b9defa3'),
+    '1': ObjectId('6a2f9030d8c2e9112b9defa4'),
+    '2': ObjectId('6a2f9030d8c2e9112b9defa5'),
+    '3': ObjectId('6a2f9030d8c2e9112b9defa6')
+  }
+}
+db.createCollection("sensor_logs")
+{ ok: 1 }
+db.sensor_logs.insertMany([
+  {
+    device_id: 1,
+    device_name: "Fan",
+    power: 120,
+    timestamp: new Date("2026-06-15T10:00:00Z")
+  },
+  {
+    device_id: 2,
+    device_name: "TV",
+    power: 80,
+    timestamp: new Date("2026-06-15T11:00:00Z")
+  },
+  {
+    device_id: 3,
+    device_name: "Fridge",
+    power: 200,
+    timestamp: new Date("2026-06-15T12:00:00Z")
+  },
+  {
+    device_id: 4,
+    device_name: "AC",
+    power: 1500,
+    timestamp: new Date("2026-06-15T13:00:00Z")
+  }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a2f903dd8c2e9112b9defa7'),
+    '1': ObjectId('6a2f903dd8c2e9112b9defa8'),
+    '2': ObjectId('6a2f903dd8c2e9112b9defa9'),
+    '3': ObjectId('6a2f903dd8c2e9112b9defaa')
+  }
+}
+db.devices.insertOne({ device_id:5, device_name:"Washing Machine", room_id:2, device_status:"OFF" })
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a2f90a8d8c2e9112b9defab')
+}
+db.devices.find()
+{
+  _id: ObjectId('6a2f9021d8c2e9112b9def9f'),
+  device_id: 1,
+  device_name: 'Fan',
+  room_id: 1,
+  device_status: 'ON'
+}
+{
+  _id: ObjectId('6a2f9021d8c2e9112b9defa0'),
+  device_id: 2,
+  device_name: 'TV',
+  room_id: 1,
+  device_status: 'OFF'
+}
+{
+  _id: ObjectId('6a2f9021d8c2e9112b9defa1'),
+  device_id: 3,
+  device_name: 'Fridge',
+  room_id: 2,
+  device_status: 'ON'
+}
+{
+  _id: ObjectId('6a2f9021d8c2e9112b9defa2'),
+  device_id: 4,
+  device_name: 'AC',
+  room_id: 3,
+  device_status: 'ON'
+}
+{
+  _id: ObjectId('6a2f90a8d8c2e9112b9defab'),
+  device_id: 5,
+  device_name: 'Washing Machine',
+  room_id: 2,
+  device_status: 'OFF'
+}
+db.devices.updateOne( {device_id:2}, {$set:{device_status:"ON"}} )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.devices.deleteOne( {device_id:5} )
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.energy_logs.aggregate([ { $lookup:{ from:"devices", localField:"device_id", foreignField:"device_id", as:"device" } }, {$unwind:"$device"}, { $lookup:{ from:"rooms", localField:"device.room_id", foreignField:"room_id", as:"room" } }, {$unwind:"$room"}, { $group:{ _id:{ room:"$room.room_name", date:"$usage_date" }, total_energy:{$sum:"$energy_used"} } } ])
+{
+  _id: {
+    room: 'Kitchen',
+    date: '2026-06-15'
+  },
+  total_energy: 6.8
+}
+{
+  _id: {
+    room: 'Living Room',
+    date: '2026-06-15'
+  },
+  total_energy: 7.4
+}
+{
+  _id: {
+    room: 'Bedroom',
+    date: '2026-06-15'
+  },
+  total_energy: 10.2
+}
+db.sensor_logs.createIndex( {device_id:1} )
+device_id_1
+db.sensor_logs.createIndex( {timestamp:1} )
+timestamp_1
+db.rooms.find() db.devices.find() db.energy_logs.find() db.sensor_logs.find()
+SyntaxError: Missing semicolon. (1:15)
+
+> 1 | db.rooms.find() db.devices.find() db.energy_logs.find() db.sensor_logs.find()
+    |                ^
+db.rooms.find()
+{
+  _id: ObjectId('6a2f8fdab664007d2741a34c'),
+  room_id: 1,
+  room_name: 'Living Room',
+  floor_no: 1
+}
+{
+  _id: ObjectId('6a2f8fdab664007d2741a34d'),
+  room_id: 2,
+  room_name: 'Kitchen',
+  floor_no: 1
+}
+{
+  _id: ObjectId('6a2f8fdab664007d2741a34e'),
+  room_id: 3,
+  room_name: 'Bedroom',
+  floor_no: 2
+}
+{
+  _id: ObjectId('6a2f900dd8c2e9112b9def9c'),
+  room_id: 1,
+  room_name: 'Living Room',
+  floor_no: 1
+}
+{
+  _id: ObjectId('6a2f900dd8c2e9112b9def9d'),
+  room_id: 2,
+  room_name: 'Kitchen',
+  floor_no: 1
+}
+{
+  _id: ObjectId('6a2f900dd8c2e9112b9def9e'),
+  room_id: 3,
+  room_name: 'Bedroom',
+  floor_no: 2
+}
+db.devices.find()
+{
+  _id: ObjectId('6a2f9021d8c2e9112b9def9f'),
+  device_id: 1,
+  device_name: 'Fan',
+  room_id: 1,
+  device_status: 'ON'
+}
+{
+  _id: ObjectId('6a2f9021d8c2e9112b9defa0'),
+  device_id: 2,
+  device_name: 'TV',
+  room_id: 1,
+  device_status: 'ON'
+}
+{
+  _id: ObjectId('6a2f9021d8c2e9112b9defa1'),
+  device_id: 3,
+  device_name: 'Fridge',
+  room_id: 2,
+  device_status: 'ON'
+}
+{
+  _id: ObjectId('6a2f9021d8c2e9112b9defa2'),
+  device_id: 4,
+  device_name: 'AC',
+  room_id: 3,
+  device_status: 'ON'
+}
+db.energy_logs.find()
+{
+  _id: ObjectId('6a2f9030d8c2e9112b9defa3'),
+  device_id: 1,
+  energy_used: 2.5,
+  usage_date: '2026-06-15',
+  usage_time: '10:00:00'
+}
+{
+  _id: ObjectId('6a2f9030d8c2e9112b9defa4'),
+  device_id: 2,
+  energy_used: 1.2,
+  usage_date: '2026-06-15',
+  usage_time: '11:00:00'
+}
+{
+  _id: ObjectId('6a2f9030d8c2e9112b9defa5'),
+  device_id: 3,
+  energy_used: 3.4,
+  usage_date: '2026-06-15',
+  usage_time: '12:00:00'
+}
+{
+  _id: ObjectId('6a2f9030d8c2e9112b9defa6'),
+  device_id: 4,
+  energy_used: 5.1,
+  usage_date: '2026-06-15',
+  usage_time: '13:00:00'
+}
+db.sensor_logs.find()
+{
+  _id: ObjectId('6a2f903dd8c2e9112b9defa7'),
+  device_id: 1,
+  device_name: 'Fan',
+  power: 120,
+  timestamp: 2026-06-15T10:00:00.000Z
+}
+{
+  _id: ObjectId('6a2f903dd8c2e9112b9defa8'),
+  device_id: 2,
+  device_name: 'TV',
+  power: 80,
+  timestamp: 2026-06-15T11:00:00.000Z
+}
+{
+  _id: ObjectId('6a2f903dd8c2e9112b9defa9'),
+  device_id: 3,
+  device_name: 'Fridge',
+  power: 200,
+  timestamp: 2026-06-15T12:00:00.000Z
+}
+{
+  _id: ObjectId('6a2f903dd8c2e9112b9defaa'),
+  device_id: 4,
+  device_name: 'AC',
+  power: 1500,
+  timestamp: 2026-06-15T13:00:00.000Z
+}
+db.sensor_logs.find( {device_id:1} )
+{
+  _id: ObjectId('6a2f903dd8c2e9112b9defa7'),
+  device_id: 1,
+  device_name: 'Fan',
+  power: 120,
+  timestamp: 2026-06-15T10:00:00.000Z
+}
+db.sensor_logs.find( { timestamp:new Date("2026-06-15T10:00:00") } )

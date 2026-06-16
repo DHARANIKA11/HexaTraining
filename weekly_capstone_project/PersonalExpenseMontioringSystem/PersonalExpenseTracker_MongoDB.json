@@ -1,0 +1,314 @@
+use personalExpenseDB;
+switched to db personalExpenseDB
+db.users.insertMany([
+{
+    user_id: 1,
+    name: "sang yan",
+    email: "dharu@gmail.com",
+    phone: "9876543210"
+},
+{
+    user_id: 2,
+    name: "wei yifan",
+    email: "rahul@gmail.com",
+    phone: "9876543211"
+}
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a30212dbba836b83ebffbca'),
+    '1': ObjectId('6a30212dbba836b83ebffbcb')
+  }
+}
+db.categories.insertMany([
+{
+    category_id: 1,
+    category_name: "Food"
+},
+{
+    category_id: 2,
+    category_name: "Transport"
+},
+{
+    category_id: 3,
+    category_name: "Shopping"
+},
+{
+    category_id: 4,
+    category_name: "Bills"
+},
+{
+    category_id: 5,
+    category_name: "Entertainment"
+}
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a30213dbba836b83ebffbcc'),
+    '1': ObjectId('6a30213dbba836b83ebffbcd'),
+    '2': ObjectId('6a30213dbba836b83ebffbce'),
+    '3': ObjectId('6a30213dbba836b83ebffbcf'),
+    '4': ObjectId('6a30213dbba836b83ebffbd0')
+  }
+}
+db.expenses.insertMany([
+{
+    expense_id: 101,
+    user_id: 1,
+    category_id: 1,
+    amount: 500,
+    date: ISODate("2026-06-01"),
+    description: "Restaurant"
+},
+{
+    expense_id: 102,
+    user_id: 1,
+    category_id: 2,
+    amount: 200,
+    date: ISODate("2026-06-02"),
+    description: "Bus Ticket"
+},
+{
+    expense_id: 103,
+    user_id: 2,
+    category_id: 3,
+    amount: 1500,
+    date: ISODate("2026-06-03"),
+    description: "Clothes"
+}
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a302148bba836b83ebffbd1'),
+    '1': ObjectId('6a302148bba836b83ebffbd2'),
+    '2': ObjectId('6a302148bba836b83ebffbd3')
+  }
+}
+db.receipts.insertMany([
+{
+    receipt_id: 1,
+    user_id: 1,
+    expense_id: 101,
+    note: "Dinner with friends",
+    receipt: {
+        store: "ABC Restaurant",
+        bill_no: "R101",
+        payment_mode: "UPI"
+    }
+},
+{
+    receipt_id: 2,
+    user_id: 2,
+    expense_id: 103,
+    note: "Shopping Mall",
+    receipt: {
+        store: "Lifestyle",
+        bill_no: "L202",
+        payment_mode: "Card"
+    }
+}
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a302156bba836b83ebffbd4'),
+    '1': ObjectId('6a302156bba836b83ebffbd5')
+  }
+}
+db.expenses.insertOne({
+expense_id: 104,
+user_id: 1,
+category_id: 4,
+amount: 800,
+date: ISODate("2026-06-05"),
+description: "Electricity Bill"
+})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a30215fbba836b83ebffbd6')
+}
+db.expenses.find()
+{
+  _id: ObjectId('6a302148bba836b83ebffbd1'),
+  expense_id: 101,
+  user_id: 1,
+  category_id: 1,
+  amount: 500,
+  date: 2026-06-01T00:00:00.000Z,
+  description: 'Restaurant'
+}
+{
+  _id: ObjectId('6a302148bba836b83ebffbd2'),
+  expense_id: 102,
+  user_id: 1,
+  category_id: 2,
+  amount: 200,
+  date: 2026-06-02T00:00:00.000Z,
+  description: 'Bus Ticket'
+}
+{
+  _id: ObjectId('6a302148bba836b83ebffbd3'),
+  expense_id: 103,
+  user_id: 2,
+  category_id: 3,
+  amount: 1500,
+  date: 2026-06-03T00:00:00.000Z,
+  description: 'Clothes'
+}
+{
+  _id: ObjectId('6a30215fbba836b83ebffbd6'),
+  expense_id: 104,
+  user_id: 1,
+  category_id: 4,
+  amount: 800,
+  date: 2026-06-05T00:00:00.000Z,
+  description: 'Electricity Bill'
+}
+db.expenses.updateOne(
+{expense_id:104},
+{
+$set:{
+amount:900
+}
+}
+)
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.expenses.deleteOne(
+{expense_id:104}
+)
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.expenses.aggregate([
+{
+$group:{
+_id:"$category_id",
+total_expense:{
+$sum:"$amount"
+}
+}
+}
+])
+{
+  _id: 2,
+  total_expense: 200
+}
+{
+  _id: 1,
+  total_expense: 500
+}
+{
+  _id: 3,
+  total_expense: 1500
+}
+db.expenses.find({
+amount:{
+$gt:1000
+}
+})
+{
+  _id: ObjectId('6a302148bba836b83ebffbd3'),
+  expense_id: 103,
+  user_id: 2,
+  category_id: 3,
+  amount: 1500,
+  date: 2026-06-03T00:00:00.000Z,
+  description: 'Clothes'
+}
+db.expenses.aggregate([
+{
+$group:{
+_id:null,
+monthly_total:{
+$sum:"$amount"
+}
+}
+}
+])
+{
+  _id: null,
+  monthly_total: 2200
+}
+db.expenses.aggregate([
+{
+$group:{
+_id:"$user_id",
+total:{
+$sum:"$amount"
+}
+}
+}
+])
+{
+  _id: 2,
+  total: 1500
+}
+{
+  _id: 1,
+  total: 700
+}
+db.expenses.aggregate([
+{
+$group:{
+_id:"$category_id",
+total:{
+$sum:"$amount"
+}
+}
+}
+])
+{
+  _id: 3,
+  total: 1500
+}
+{
+  _id: 1,
+  total: 500
+}
+{
+  _id: 2,
+  total: 200
+}
+db.receipts.createIndex(
+{
+user_id:1
+}
+)
+user_id_1
+db.receipts.createIndex(
+{
+expense_id:1
+}
+)
+expense_id_1
+db.receipts.createIndex(
+{
+user_id:1,
+expense_id:1
+}
+)
+user_id_1_expense_id_1
+db.receipts.getIndexes()
+[
+  { v: 2, key: { _id: 1 }, name: '_id_' },
+  { v: 2, key: { user_id: 1 }, name: 'user_id_1' },
+  { v: 2, key: { expense_id: 1 }, name: 'expense_id_1' },
+  {
+    v: 2,
+    key: { user_id: 1, expense_id: 1 },
+    name: 'user_id_1_expense_id_1'
+  }
+]
+personalExpenseDB
+
+
