@@ -1,0 +1,6 @@
+flight_id,airline,from_city,to_city,duration,status
+F101,Indigo,Hyderabad,Delhi,140,On Time
+F102,Air India,Mumbai,Chennai,120,Delayed
+F103,Vistara,Delhi,Bangalore,160,On Time
+F104,SpiceJet,Chennai,Hyderabad,90,Cancelled
+F105,Akasa,Mumbai,Delhi,130,Delayed

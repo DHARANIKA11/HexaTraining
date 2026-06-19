@@ -1,0 +1,12 @@
+[
+  {
+    "passenger_name": "Rahul Sharma",
+    "meal": "Veg",
+    "seat": "Window"
+  },
+  {
+    "passenger_name": "Priya Reddy",
+    "meal": "Non-Veg",
+    "seat": "Aisle"
+  }
+]

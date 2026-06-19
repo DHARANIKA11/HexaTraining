@@ -1,0 +1,6 @@
+booking_id,flight_id,passenger_name,travel_class,ticket_price,booking_date
+B1001,F101,Rahul Sharma,Economy,8500,2026-06-01
+B1002,F101,Priya Reddy,Business,22000,2026-06-01
+B1003,F102,Amit Kumar,Economy,7800,2026-06-02
+B1004,F103,Sneha Patel,Business,25000,2026-06-03
+B1005,F104,Farhan Ali,Economy,6500,2026-06-04
